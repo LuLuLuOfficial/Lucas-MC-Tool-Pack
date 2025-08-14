@@ -1,1083 +1,1276 @@
 <!DOCTYPE html>
 <html lang="en" class="en" prefix="og: http://ogp.me/ns#">
-  <!-- Mirrored from www.chunkbase.com/apps/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:14:46 GMT -->
+    <!-- Mirrored from www.chunkbase.com/apps/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:14:46 GMT -->
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Minecraft Apps - Overview</title>
-    <meta
-      name="description"
-      content="A collection of apps to help you find the best Minecraft seeds, and locate biomes and structures in your world on an interactive map."
-    />
-    <link rel="canonical" href="index.html" />
-    <link rel="sitemap" href="https://www.chunkbase.com/sitemap-index.xml" />
-    <script>
-      !(function () {
-        var e, t;
-        !(function (e, t) {
-          (e.adthrive = e.adthrive || {}),
-            (e.adthrive.cmd = e.adthrive.cmd || []),
-            (e.adthrive.plugin = "adthrive-ads-manual"),
-            (e.adthrive.host = "ads.adthrive.com");
-          var r = t.createElement("script");
-          (r.async = !0),
-            (r.referrerpolicy = "no-referrer-when-downgrade"),
-            (r.src =
-              "https://" +
-              e.adthrive.host +
-              "/sites/5ebe970bf67e7555ae952e5e/ads.min.js?referrer=" +
-              e.encodeURIComponent(e.location.href));
-          var o = t.getElementsByTagName("script")[0];
-          o.parentNode.insertBefore(r, o),
-            (r.onerror = function () {
-              setTimeout(function () {
-                window.__cbcu({ blocked: !0 });
-              });
-            });
-        })(window, document),
-          (e = []),
-          (t = {}),
-          (window.__cbc = function (r) {
-            e.push(r), r(t);
-          }),
-          (window.__cbcof = function (e, t) {
-            var r = !1;
-            window.__cbc(function (o) {
-              !r && e(o) && ((r = !0), t());
-            });
-          }),
-          (window.__cbcu = function (r) {
-            (t = Object.assign(t, r)),
-              e.forEach(function (e) {
-                e(t);
-              });
-          }),
-          window.adthrive.cmd.push(function () {
-            adthrive.config.gdpr._isRequired
-              ? (window.__cbcu({ gdpr: !0 }),
-                __tcfapi("addEventListener", 2, function (e, t) {
-                  window.__cbcu({ gdpr: !0, tcData: e });
-                }))
-              : window.__cbcu({ gdpr: !1 });
-          }),
-          (window.dataLayer = window.dataLayer || []),
-          (window.gtag = function () {
-            dataLayer.push(arguments);
-          }),
-          window.__cbcof(
-            function (e) {
-              return (
-                !1 === e.gdpr ||
-                (!!e.tcData &&
-                  (!1 === e.tcData.gdprApplies ||
-                    (!(
-                      !e.tcData.purpose.consents[1] ||
-                      !e.tcData.purpose.consents[8]
-                    ) &&
-                      (e.tcData.customVendorConsents
-                        ? !!e.tcData.customVendorConsents.s26
-                        : e.tcData.vendor.consents[755]))))
-              );
-            },
-            function () {
-              (window.gtag_enable_tcf_support = !0),
-                gtag("js", new Date()),
-                gtag("config", "G-GDKTKPZPPB", { store_gac: !1 });
-              var e = document.createElement("script");
-              (e.type = "text/javascript"),
-                (e.async = "true"),
-                (e.src =
-                  "https://www.googletagmanager.com/gtag/js?id=G-GDKTKPZPPB");
-              var t = document.getElementsByTagName("script")[0];
-              t.parentNode.insertBefore(e, t);
-            }
-          ),
-          (function () {
-            "use strict";
-            var e;
-            (e = document),
-              (function () {
-                var t, r;
-                function o() {
-                  var t = e.createElement("script");
-                  (t.src =
-                    "https://btloader.com/tag?h=cafemedia-com&amp;upapi=true"),
-                    e.head.appendChild(t);
-                }
-                function n() {
-                  var t = e.cookie.match("(^|[^;]+)s*__adblockers*=s*([^;]+)");
-                  return t && t.pop();
-                }
-                function a() {
-                  clearInterval(r);
-                }
-                return {
-                  init: function () {
-                    var e;
-                    "true" === (t = n())
-                      ? o()
-                      : ((e = 0),
-                        (r = setInterval(function () {
-                          (100 !== e && "false" !== t) || a(),
-                            "true" === t && (o(), a()),
-                            (t = n()),
-                            e++;
-                        }, 50)));
-                  },
-                };
-              })().init();
-          })();
-        var r = document.createElement("script");
-        (r.type = "text/javascript"),
-          (r.async = "true"),
-          (r.src =
-            "https://btloader.com/tag?o=5698917485248512&amp;upapi=true&amp;domain=chunkbase.com");
-        var o = document.getElementsByTagName("script")[0];
-        o.parentNode.insertBefore(r, o);
-        var n = !1;
-        try {
-          n = "true" === window.localStorage.getItem("cb_force_posthog");
-        } catch (e) {}
-        (n ||
-          (function () {
-            var e;
-            try {
-              var t = window.localStorage.getItem("cb_posthog_roll");
-              null !== t && (e = parseFloat(t));
-            } catch (e) {
-              console.warn("Failed to read posthog roll from localStorage:", e);
-            }
-            if ("number" == typeof e && !isNaN(e) && e >= 0 && e <= 1) return e;
-            e = Math.round(1e3 * Math.random()) / 1e3;
-            try {
-              window.localStorage.setItem("cb_posthog_roll", e);
-            } catch (e) {
-              console.warn("Failed to store posthog roll in localStorage:", e);
-            }
-            return e;
-          })() < 0.006) &&
-          window.__cbcof(
-            function (e) {
-              return (
-                !1 === e.gdpr ||
-                (!!e.tcData &&
-                  (!1 === e.tcData.gdprApplies ||
-                    !(
-                      !e.tcData.purpose.consents[1] ||
-                      !e.tcData.purpose.consents[8]
-                    )))
-              );
-            },
-            function () {
-              var e, t, r, o, n, a;
-              (e = document),
-                (t = window.posthog || []).__SV ||
-                  ((window.posthog = t),
-                  (t._i = []),
-                  (t.init = function (c, i, s) {
-                    function p(e, t) {
-                      var r = t.split(".");
-                      2 == r.length && ((e = e[r[0]]), (t = r[1])),
-                        (e[t] = function () {
-                          e.push(
-                            [t].concat(Array.prototype.slice.call(arguments, 0))
-                          );
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Minecraft Apps - Overview</title>
+        <meta
+            name="description"
+            content="A collection of apps to help you find the best Minecraft seeds, and locate biomes and structures in your world on an interactive map."
+        />
+        <link rel="canonical" href="index.html" />
+        <link
+            rel="sitemap"
+            href="https://www.chunkbase.com/sitemap-index.xml"
+        />
+        <script>
+            !(function () {
+                var e, t;
+                !(function (e, t) {
+                    (e.adthrive = e.adthrive || {}),
+                        (e.adthrive.cmd = e.adthrive.cmd || []),
+                        (e.adthrive.plugin = "adthrive-ads-manual"),
+                        (e.adthrive.host = "ads.adthrive.com");
+                    var r = t.createElement("script");
+                    (r.async = !0),
+                        (r.referrerpolicy = "no-referrer-when-downgrade"),
+                        (r.src =
+                            "https://" +
+                            e.adthrive.host +
+                            "/sites/5ebe970bf67e7555ae952e5e/ads.min.js?referrer=" +
+                            e.encodeURIComponent(e.location.href));
+                    var o = t.getElementsByTagName("script")[0];
+                    o.parentNode.insertBefore(r, o),
+                        (r.onerror = function () {
+                            setTimeout(function () {
+                                window.__cbcu({ blocked: !0 });
+                            });
                         });
-                    }
-                    ((n = e.createElement("script")).type = "text/javascript"),
-                      (n.crossOrigin = "anonymous"),
-                      (n.async = !0),
-                      (n.src = i.api_host + "/static/array.js"),
-                      (a =
-                        e.getElementsByTagName(
-                          "script"
-                        )[0]).parentNode.insertBefore(n, a);
-                    var u = t;
-                    for (
-                      void 0 !== s ? (u = t[s] = []) : (s = "posthog"),
-                        u.people = u.people || [],
-                        u.toString = function (e) {
-                          var t = "posthog";
-                          return (
-                            "posthog" !== s && (t += "." + s),
-                            e || (t += " (stub)"),
-                            t
-                          );
+                })(window, document),
+                    (e = []),
+                    (t = {}),
+                    (window.__cbc = function (r) {
+                        e.push(r), r(t);
+                    }),
+                    (window.__cbcof = function (e, t) {
+                        var r = !1;
+                        window.__cbc(function (o) {
+                            !r && e(o) && ((r = !0), t());
+                        });
+                    }),
+                    (window.__cbcu = function (r) {
+                        (t = Object.assign(t, r)),
+                            e.forEach(function (e) {
+                                e(t);
+                            });
+                    }),
+                    window.adthrive.cmd.push(function () {
+                        adthrive.config.gdpr._isRequired
+                            ? (window.__cbcu({ gdpr: !0 }),
+                              __tcfapi("addEventListener", 2, function (e, t) {
+                                  window.__cbcu({ gdpr: !0, tcData: e });
+                              }))
+                            : window.__cbcu({ gdpr: !1 });
+                    }),
+                    (window.dataLayer = window.dataLayer || []),
+                    (window.gtag = function () {
+                        dataLayer.push(arguments);
+                    }),
+                    window.__cbcof(
+                        function (e) {
+                            return (
+                                !1 === e.gdpr ||
+                                (!!e.tcData &&
+                                    (!1 === e.tcData.gdprApplies ||
+                                        (!(
+                                            !e.tcData.purpose.consents[1] ||
+                                            !e.tcData.purpose.consents[8]
+                                        ) &&
+                                            (e.tcData.customVendorConsents
+                                                ? !!e.tcData
+                                                      .customVendorConsents.s26
+                                                : e.tcData.vendor
+                                                      .consents[755]))))
+                            );
                         },
-                        u.people.toString = function () {
-                          return u.toString(1) + ".people (stub)";
+                        function () {
+                            (window.gtag_enable_tcf_support = !0),
+                                gtag("js", new Date()),
+                                gtag("config", "G-GDKTKPZPPB", {
+                                    store_gac: !1,
+                                });
+                            var e = document.createElement("script");
+                            (e.type = "text/javascript"),
+                                (e.async = "true"),
+                                (e.src =
+                                    "https://www.googletagmanager.com/gtag/js?id=G-GDKTKPZPPB");
+                            var t = document.getElementsByTagName("script")[0];
+                            t.parentNode.insertBefore(e, t);
+                        }
+                    ),
+                    (function () {
+                        "use strict";
+                        var e;
+                        (e = document),
+                            (function () {
+                                var t, r;
+                                function o() {
+                                    var t = e.createElement("script");
+                                    (t.src =
+                                        "https://btloader.com/tag?h=cafemedia-com&amp;upapi=true"),
+                                        e.head.appendChild(t);
+                                }
+                                function n() {
+                                    var t = e.cookie.match(
+                                        "(^|[^;]+)s*__adblockers*=s*([^;]+)"
+                                    );
+                                    return t && t.pop();
+                                }
+                                function a() {
+                                    clearInterval(r);
+                                }
+                                return {
+                                    init: function () {
+                                        var e;
+                                        "true" === (t = n())
+                                            ? o()
+                                            : ((e = 0),
+                                              (r = setInterval(function () {
+                                                  (100 !== e &&
+                                                      "false" !== t) ||
+                                                      a(),
+                                                      "true" === t &&
+                                                          (o(), a()),
+                                                      (t = n()),
+                                                      e++;
+                                              }, 50)));
+                                    },
+                                };
+                            })().init();
+                    })();
+                var r = document.createElement("script");
+                (r.type = "text/javascript"),
+                    (r.async = "true"),
+                    (r.src =
+                        "https://btloader.com/tag?o=5698917485248512&amp;upapi=true&amp;domain=chunkbase.com");
+                var o = document.getElementsByTagName("script")[0];
+                o.parentNode.insertBefore(r, o);
+                var n = !1;
+                try {
+                    n =
+                        "true" ===
+                        window.localStorage.getItem("cb_force_posthog");
+                } catch (e) {}
+                (n ||
+                    (function () {
+                        var e;
+                        try {
+                            var t =
+                                window.localStorage.getItem("cb_posthog_roll");
+                            null !== t && (e = parseFloat(t));
+                        } catch (e) {
+                            console.warn(
+                                "Failed to read posthog roll from localStorage:",
+                                e
+                            );
+                        }
+                        if (
+                            "number" == typeof e &&
+                            !isNaN(e) &&
+                            e >= 0 &&
+                            e <= 1
+                        )
+                            return e;
+                        e = Math.round(1e3 * Math.random()) / 1e3;
+                        try {
+                            window.localStorage.setItem("cb_posthog_roll", e);
+                        } catch (e) {
+                            console.warn(
+                                "Failed to store posthog roll in localStorage:",
+                                e
+                            );
+                        }
+                        return e;
+                    })() < 0.006) &&
+                    window.__cbcof(
+                        function (e) {
+                            return (
+                                !1 === e.gdpr ||
+                                (!!e.tcData &&
+                                    (!1 === e.tcData.gdprApplies ||
+                                        !(
+                                            !e.tcData.purpose.consents[1] ||
+                                            !e.tcData.purpose.consents[8]
+                                        )))
+                            );
                         },
-                        r =
-                          "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(
-                            " "
-                          ),
-                        o = 0;
-                      o < r.length;
-                      o++
-                    )
-                      p(u, r[o]);
-                    t._i.push([c, i, s]);
-                  }),
-                  (t.__SV = 1));
-              const c = new Set();
-              posthog.init("phc_H04GzkOW5uVbDrN3t1iT6rklD853o5ICMrLNxal9YVY", {
-                api_host: "https://eu.i.posthog.com",
-                persistence: "memory",
-                rate_limiting: { events_per_second: 3, events_burst_limit: 10 },
-                capture_exceptions: {
-                  capture_console_errors: !1,
-                  capture_unhandled_errors: !0,
-                  capture_unhandled_rejections: !0,
-                },
-                capture_performance: !0,
-                autocapture: !1,
-                rageclick: !1,
-                capture_dead_clicks: !1,
-                disable_session_recording: !0,
-                disable_surveys: !0,
-                enable_heatmaps: !1,
-                capture_heatmaps: !1,
-                before_send: function (e) {
-                  if (
-                    (e?.properties?.$current_url &&
-                      (e.properties.$current_url =
-                        e.properties.$current_url.split("#")[0]),
-                    !e ||
-                      "$exception" !== e.event ||
-                      !e.properties.$exception_list[0])
-                  )
-                    return e;
-                  const t = `${e.properties.$exception_list[0].type}-${e.properties.$exception_list[0].value}`;
-                  return c.has(t)
-                    ? null
-                    : (c.add(t),
-                      setTimeout(function () {
-                        c.delete(t);
-                      }, 2e3),
-                      e);
-                },
-              });
-            }
-          );
-      })();
-    </script>
-    <meta property="og:site_name" content="Chunk Base" />
-    <meta property="og:title" content="Minecraft Apps - Overview" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:description"
-      content="A collection of apps to help you find the best Minecraft seeds, and locate biomes and structures in your world on an interactive map."
-    />
-    <meta property="og:url" content="https://www.chunkbase.com/apps/" />
-    <meta
-      property="og:image"
-      content="https://www.chunkbase.com/img/banner/banner0.png"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="https://www.chunkbase.com/img/banner.webp"
-      fetchpriority="high"
-      media="(min-width: 920px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      fetchpriority="high"
-      href="https://www.chunkbase.com/img/banner420.webp"
-      media="(max-width: 650px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      fetchpriority="high"
-      href="https://www.chunkbase.com/img/banner630.webp"
-      media="(min-width: 651px) and (max-width: 919px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      fetchpriority="high"
-      href="https://www.chunkbase.com/img/logo.webp"
-      media="(min-width: 651px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      fetchpriority="high"
-      href="https://www.chunkbase.com/img/logo410.webp"
-      media="(max-width: 650px)"
-    />
-    <link
-      rel="stylesheet"
-      href="https://www.chunkbase.com/_astro/8nv7zFwfz92g.css"
-    />
-  </head>
+                        function () {
+                            var e, t, r, o, n, a;
+                            (e = document),
+                                (t = window.posthog || []).__SV ||
+                                    ((window.posthog = t),
+                                    (t._i = []),
+                                    (t.init = function (c, i, s) {
+                                        function p(e, t) {
+                                            var r = t.split(".");
+                                            2 == r.length &&
+                                                ((e = e[r[0]]), (t = r[1])),
+                                                (e[t] = function () {
+                                                    e.push(
+                                                        [t].concat(
+                                                            Array.prototype.slice.call(
+                                                                arguments,
+                                                                0
+                                                            )
+                                                        )
+                                                    );
+                                                });
+                                        }
+                                        ((n = e.createElement("script")).type =
+                                            "text/javascript"),
+                                            (n.crossOrigin = "anonymous"),
+                                            (n.async = !0),
+                                            (n.src =
+                                                i.api_host +
+                                                "/static/array.js"),
+                                            (a =
+                                                e.getElementsByTagName(
+                                                    "script"
+                                                )[0]).parentNode.insertBefore(
+                                                n,
+                                                a
+                                            );
+                                        var u = t;
+                                        for (
+                                            void 0 !== s
+                                                ? (u = t[s] = [])
+                                                : (s = "posthog"),
+                                                u.people = u.people || [],
+                                                u.toString = function (e) {
+                                                    var t = "posthog";
+                                                    return (
+                                                        "posthog" !== s &&
+                                                            (t += "." + s),
+                                                        e || (t += " (stub)"),
+                                                        t
+                                                    );
+                                                },
+                                                u.people.toString =
+                                                    function () {
+                                                        return (
+                                                            u.toString(1) +
+                                                            ".people (stub)"
+                                                        );
+                                                    },
+                                                r =
+                                                    "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(
+                                                        " "
+                                                    ),
+                                                o = 0;
+                                            o < r.length;
+                                            o++
+                                        )
+                                            p(u, r[o]);
+                                        t._i.push([c, i, s]);
+                                    }),
+                                    (t.__SV = 1));
+                            const c = new Set();
+                            posthog.init(
+                                "phc_H04GzkOW5uVbDrN3t1iT6rklD853o5ICMrLNxal9YVY",
+                                {
+                                    api_host: "https://eu.i.posthog.com",
+                                    persistence: "memory",
+                                    rate_limiting: {
+                                        events_per_second: 3,
+                                        events_burst_limit: 10,
+                                    },
+                                    capture_exceptions: {
+                                        capture_console_errors: !1,
+                                        capture_unhandled_errors: !0,
+                                        capture_unhandled_rejections: !0,
+                                    },
+                                    capture_performance: !0,
+                                    autocapture: !1,
+                                    rageclick: !1,
+                                    capture_dead_clicks: !1,
+                                    disable_session_recording: !0,
+                                    disable_surveys: !0,
+                                    enable_heatmaps: !1,
+                                    capture_heatmaps: !1,
+                                    before_send: function (e) {
+                                        if (
+                                            (e?.properties?.$current_url &&
+                                                (e.properties.$current_url =
+                                                    e.properties.$current_url.split(
+                                                        "#"
+                                                    )[0]),
+                                            !e ||
+                                                "$exception" !== e.event ||
+                                                !e.properties
+                                                    .$exception_list[0])
+                                        )
+                                            return e;
+                                        const t = `${e.properties.$exception_list[0].type}-${e.properties.$exception_list[0].value}`;
+                                        return c.has(t)
+                                            ? null
+                                            : (c.add(t),
+                                              setTimeout(function () {
+                                                  c.delete(t);
+                                              }, 2e3),
+                                              e);
+                                    },
+                                }
+                            );
+                        }
+                    );
+            })();
+        </script>
+        <meta property="og:site_name" content="Chunk Base" />
+        <meta property="og:title" content="Minecraft Apps - Overview" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:description"
+            content="A collection of apps to help you find the best Minecraft seeds, and locate biomes and structures in your world on an interactive map."
+        />
+        <meta property="og:url" content="https://www.chunkbase.com/apps/" />
+        <meta
+            property="og:image"
+            content="https://www.chunkbase.com/img/banner/banner0.png"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="https://www.chunkbase.com/img/banner.webp"
+            fetchpriority="high"
+            media="(min-width: 920px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            fetchpriority="high"
+            href="https://www.chunkbase.com/img/banner420.webp"
+            media="(max-width: 650px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            fetchpriority="high"
+            href="https://www.chunkbase.com/img/banner630.webp"
+            media="(min-width: 651px) and (max-width: 919px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            fetchpriority="high"
+            href="https://www.chunkbase.com/img/logo.webp"
+            media="(min-width: 651px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            fetchpriority="high"
+            href="https://www.chunkbase.com/img/logo410.webp"
+            media="(max-width: 650px)"
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.chunkbase.com/_astro/8nv7zFwfz92g.css"
+        />
+    </head>
 
-  <body class="at-disable-header at-disable-content">
-    <div class="main-wrapper">
-      <link
-        rel="preload"
-        as="image"
-        href="https://www.chunkbase.com/_astro/facebook.CoXNppMX.png"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="https://www.chunkbase.com/_astro/youtube.CP7ATCfL.png"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="https://www.chunkbase.com/_astro/twitter.mb8CufIF.png"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="https://www.chunkbase.com/_astro/ko-fi.CGck_a92.png"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
-      />
-      <div id="content">
-        <header id="pageheader">
-          <a href="https://www.chunkbase.com/" title="Home" id="logoanchor">
-            <picture>
-              <source
-                media="(max-width: 650px)"
-                srcset="/img/logo410.webp"
-                width="410"
-                height="56"
-              />
-              <img
-                id="logo"
-                src="https://www.chunkbase.com/img/logo.webp"
-                fetchPriority="high"
-                alt="Chunk Base Logo"
-                width="520"
-                height="71"
-              />
-            </picture>
-          </a>
-          <ul id="socialnav">
-            <li id="facebookli">
-              <a href="https://www.facebook.com/chunkbase" title="facebook"
-                ><img
-                  alt="facebook"
-                  src="https://www.chunkbase.com/_astro/facebook.CoXNppMX.png"
-              /></a>
-            </li>
-            <li id="youtubeli">
-              <a href="https://www.youtube.com/@Chunkbase" title="YouTube"
-                ><img
-                  alt="YouTube"
-                  src="https://www.chunkbase.com/_astro/youtube.CP7ATCfL.png"
-              /></a>
-            </li>
-            <li id="twitterli">
-              <a href="https://twitter.com/chunkbase" title="Twitter"
-                ><img
-                  alt="Twitter"
-                  src="https://www.chunkbase.com/_astro/twitter.mb8CufIF.png"
-              /></a>
-            </li>
-            <li id="gplusli">
-              <a href="https://ko-fi.com/chunkbase" title="Ko-fi"
-                ><img
-                  alt="Ko-fi"
-                  src="https://www.chunkbase.com/_astro/ko-fi.CGck_a92.png"
-              /></a>
-            </li>
-          </ul>
-          <div id="navbanner">
-            <picture>
-              <source
-                media="(min-width: 920px)"
-                srcset="/img/banner.webp"
-                width="885"
-                height="320"
-              />
-              <source
-                media="(max-width: 650px)"
-                srcset="/img/banner420.webp"
-                width="420"
-                height="152"
-              />
-              <img
-                src="https://www.chunkbase.com/img/banner630.webp"
-                fetchPriority="high"
-                alt="Banner"
-                width="630"
-                height="228"
-              />
-            </picture>
-          </div>
-          <div id="navwrap">
-            <nav class="nav">
-              <ul>
-                <li id="navhome" class="">
-                  <a title="Home" href="https://www.chunkbase.com/">Home</a>
-                </li>
-                <li id="navapps" class="active">
-                  <a title="Minecraft Apps" href="index.html">Apps</a>
-                </li>
-                <li id="navmods" class="">
-                  <a
-                    title="Minecraft Mods"
-                    href="https://www.chunkbase.com/mods/"
-                    >Mods</a
-                  >
-                </li>
-                <li id="navtuts" class="">
-                  <a
-                    title="Minecraft Tutorials"
-                    href="https://www.chunkbase.com/tutorials/"
-                    >Tuts</a
-                  >
-                </li>
-              </ul>
-              <div id="navdeco1"></div>
-              <div id="navdeco2"></div>
-              <div id="navdeco3"></div>
-              <div id="navdeco4"></div>
-              <div id="navdeco5"></div>
-              <div id="navdeco6"></div>
-              <div id="navdeco7"></div>
-              <div id="navdeco8"></div>
-            </nav>
-          </div>
-        </header>
-        <div id="main-content">
-          <div id="main" class="">
-            <article>
-              <div class="box box overview overview-thumbs">
-                <header>
-                  <h1 class="boxheader font-bold">Chunk Finders</h1>
-                </header>
-                <div class="boxcontent">
-                  <div class="sectionwrap">
+    <body class="at-disable-header at-disable-content">
+        <div class="main-wrapper">
+            <link
+                rel="preload"
+                as="image"
+                href="https://www.chunkbase.com/_astro/facebook.CoXNppMX.png"
+            />
+            <link
+                rel="preload"
+                as="image"
+                href="https://www.chunkbase.com/_astro/youtube.CP7ATCfL.png"
+            />
+            <link
+                rel="preload"
+                as="image"
+                href="https://www.chunkbase.com/_astro/twitter.mb8CufIF.png"
+            />
+            <link
+                rel="preload"
+                as="image"
+                href="https://www.chunkbase.com/_astro/ko-fi.CGck_a92.png"
+            />
+            <link
+                rel="preload"
+                as="image"
+                href="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
+            />
+            <div id="content">
+                <header id="pageheader">
                     <a
-                      href="seed-map.html"
-                      class="alert alert-success-new overview-callout"
-                      >Want to see everything on one map? Check out our<!-- -->
-                      <span class="overview-callout-target">Seed Map App</span
-                      >!</a
+                        href="https://www.chunkbase.com/"
+                        title="Home"
+                        id="logoanchor"
                     >
-                    <p>
-                      This set of apps allows you to easily view different map
-                      features and find points of interest in your minecraft
-                      world with just your map seed. Version support varies.
-                    </p>
-                    <h3>Popular</h3>
-                    <ul class="modules">
-                      <li>
-                        <a href="biome-finder.html" title="Biome Finder">
-                          <div
-                            class="chunk-finders-tn-biome-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Biome
-                        </a>
-                      </li>
-                      <li>
-                        <a href="slime-finder.html" title="Slime Finder">
-                          <div
-                            class="chunk-finders-tn-slime-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Slime Chunk
-                        </a>
-                      </li>
-                      <li>
-                        <a href="village-finder.html" title="Village Finder">
-                          <div
-                            class="chunk-finders-tn-village2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Village
-                        </a>
-                      </li>
+                        <picture>
+                            <source
+                                media="(max-width: 650px)"
+                                srcset="/img/logo410.webp"
+                                width="410"
+                                height="56"
+                            />
+                            <img
+                                id="logo"
+                                src="https://www.chunkbase.com/img/logo.webp"
+                                fetchPriority="high"
+                                alt="Chunk Base Logo"
+                                width="520"
+                                height="71"
+                            />
+                        </picture>
+                    </a>
+                    <ul id="socialnav">
+                        <li id="facebookli">
+                            <a
+                                href="https://www.facebook.com/chunkbase"
+                                title="facebook"
+                                ><img
+                                    alt="facebook"
+                                    src="https://www.chunkbase.com/_astro/facebook.CoXNppMX.png"
+                            /></a>
+                        </li>
+                        <li id="youtubeli">
+                            <a
+                                href="https://www.youtube.com/@Chunkbase"
+                                title="YouTube"
+                                ><img
+                                    alt="YouTube"
+                                    src="https://www.chunkbase.com/_astro/youtube.CP7ATCfL.png"
+                            /></a>
+                        </li>
+                        <li id="twitterli">
+                            <a
+                                href="https://twitter.com/chunkbase"
+                                title="Twitter"
+                                ><img
+                                    alt="Twitter"
+                                    src="https://www.chunkbase.com/_astro/twitter.mb8CufIF.png"
+                            /></a>
+                        </li>
+                        <li id="gplusli">
+                            <a href="https://ko-fi.com/chunkbase" title="Ko-fi"
+                                ><img
+                                    alt="Ko-fi"
+                                    src="https://www.chunkbase.com/_astro/ko-fi.CGck_a92.png"
+                            /></a>
+                        </li>
                     </ul>
-                    <div class="clearfix"></div>
-                    <h3>Overworld</h3>
-                    <ul class="modules">
-                      <li>
-                        <a href="dungeon-finder.html" title="Dungeon Finder">
-                          <div
-                            class="chunk-finders-tn-dungeon-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Dungeon
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="stronghold-finder.html"
-                          title="Stronghold Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-stronghold-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Stronghold
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="mansion-finder.html"
-                          title="Woodland Mansion Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-mansion3-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Mansion
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="ocean-monument-finder.html"
-                          title="Ocean Monument Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-ocean-monument2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Monument
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="pillager-outpost-finder.html"
-                          title="Pillager Outpost Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-pillager-outpost2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Pillager Outpost
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="mineshaft-finder.html"
-                          title="Mineshaft Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-mineshaft2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Mineshaft
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="ruined-portal-finder.html"
-                          title="Ruined Portal Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-ruined-portal-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Ruined Portal
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="jungle-temple-finder.html"
-                          title="Jungle Temple Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-jungle-temple-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Jungle Temple
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="desert-temple-finder.html"
-                          title="Desert Temple Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-desert-temple-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Desert Temple
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="witch-hut-finder.html"
-                          title="Witch Hut Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-witch-hut2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Witch Hut
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="buried-treasure-finder.html"
-                          title="Buried Treasure Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-buried-treasure-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Buried Treasure
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="shipwreck-finder.html"
-                          title="Shipwreck Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-shipwreck2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Shipwreck
-                        </a>
-                      </li>
-                      <li>
-                        <a href="igloo-finder.html" title="Igloo Finder">
-                          <div
-                            class="chunk-finders-tn-igloo2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Igloo
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="ocean-ruin-finder.html"
-                          title="Ocean Ruin Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-ocean-ruin-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Ocean Ruin
-                        </a>
-                      </li>
-                      <li>
-                        <a href="fossil-finder.html" title="Fossil Finder">
-                          <div
-                            class="chunk-finders-tn-fossil-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Fossil
-                        </a>
-                      </li>
-                      <li>
-                        <a href="ravine-finder.html" title="Ravine Finder">
-                          <div
-                            class="chunk-finders-tn-ravine-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Ravine
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="amethyst-geode-finder.html"
-                          title="Amethyst Geode Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-amethyst-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Amethyst Geode
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="ancient-city-finder.html"
-                          title="Ancient City Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-ancient-city-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Ancient City
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                    <h3>Nether and End</h3>
-                    <ul class="modules">
-                      <li>
-                        <a href="endcity-finder.html" title="End City Finder">
-                          <div
-                            class="chunk-finders-tn-end-city-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->End City
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="nether-fortress-finder.html"
-                          title="Nether Fortress Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-nether-fortress2-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Nether Fortress
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="ruined-portal-finder.html"
-                          title="Ruined Portal Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-ruined-portal-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Ruined Portal
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="bastion-remnant-finder.html"
-                          title="Bastion Remnant Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-piglin-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Bastion
-                        </a>
-                      </li>
-                      <li>
-                        <a href="fossil-finder.html" title="Fossil Finder">
-                          <div
-                            class="chunk-finders-tn-fossil-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->Fossil
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="end-gateway-finder.html"
-                          title="End Gateway Finder"
-                        >
-                          <div
-                            class="chunk-finders-tn-end-gateway-icon_22"
-                            role="img"
-                          ></div>
-                          <!-- -->End Gateway
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <link
-              rel="preload"
-              as="image"
-              href="https://www.chunkbase.com/img/gallery/seed-map_200.png"
-            />
-            <link
-              rel="preload"
-              as="image"
-              href="https://www.chunkbase.com/img/gallery/spawn-chunks-reader_200.webp"
-            />
-            <link
-              rel="preload"
-              as="image"
-              href="https://www.chunkbase.com/img/gallery/seed-finder-slimes_200.webp"
-            />
-            <article>
-              <div class="box overview">
-                <header>
-                  <h1 class="boxheader font-bold">More Apps</h1>
+                    <div id="navbanner">
+                        <picture>
+                            <source
+                                media="(min-width: 920px)"
+                                srcset="/img/banner.webp"
+                                width="885"
+                                height="320"
+                            />
+                            <source
+                                media="(max-width: 650px)"
+                                srcset="/img/banner420.webp"
+                                width="420"
+                                height="152"
+                            />
+                            <img
+                                src="https://www.chunkbase.com/img/banner630.webp"
+                                fetchPriority="high"
+                                alt="Banner"
+                                width="630"
+                                height="228"
+                            />
+                        </picture>
+                    </div>
+                    <div id="navwrap">
+                        <nav class="nav">
+                            <ul>
+                                <li id="navhome" class="">
+                                    <a
+                                        title="Home"
+                                        href="https://www.chunkbase.com/"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li id="navapps" class="active">
+                                    <a title="Minecraft Apps" href="index.html"
+                                        >Apps</a
+                                    >
+                                </li>
+                                <li id="navmods" class="">
+                                    <a
+                                        title="Minecraft Mods"
+                                        href="https://www.chunkbase.com/mods/"
+                                        >Mods</a
+                                    >
+                                </li>
+                                <li id="navtuts" class="">
+                                    <a
+                                        title="Minecraft Tutorials"
+                                        href="https://www.chunkbase.com/tutorials/"
+                                        >Tuts</a
+                                    >
+                                </li>
+                            </ul>
+                            <div id="navdeco1"></div>
+                            <div id="navdeco2"></div>
+                            <div id="navdeco3"></div>
+                            <div id="navdeco4"></div>
+                            <div id="navdeco5"></div>
+                            <div id="navdeco6"></div>
+                            <div id="navdeco7"></div>
+                            <div id="navdeco8"></div>
+                        </nav>
+                    </div>
                 </header>
-                <div class="boxcontent">
-                  <a title="Seed Map" class="sectionwrap" href="seed-map.html">
-                    <section>
-                      <header>
-                        <h2>Seed Map</h2>
-                        <figure class="framed">
-                          <img
-                            alt="Seed Map"
-                            src="https://www.chunkbase.com/img/gallery/seed-map_200.png"
-                          />
-                        </figure>
-                      </header>
-                      <div class="description">
-                        <p class="py-[1em]">
-                          An online map viewer that helps you find new Minecraft
-                          seeds and locate biomes, structures, slime chunks and
-                          other features in your current world.
-                        </p>
-                        <footer>
-                          Last Update:<!-- -->
-                          <time datetime="17-06-2025">Jun 17, 2025</time>
-                        </footer>
-                      </div>
-                    </section>
-                  </a>
-                  <div class="hr"></div>
-                  <a
-                    title="Spawn Chunks Reader"
-                    class="sectionwrap"
-                    href="spawn-chunks-reader.html"
-                  >
-                    <section>
-                      <header>
-                        <h2>Spawn Chunks Reader</h2>
-                        <figure class="framed">
-                          <img
-                            alt="Spawn Chunks Reader"
-                            src="https://www.chunkbase.com/img/gallery/spawn-chunks-reader_200.webp"
-                          />
-                        </figure>
-                      </header>
-                      <div class="description">
-                        <p class="py-[1em]">
-                          Spawn Chunks Reader provides a quick and easy way to
-                          figure out your world&#x27;s spawn chunks and
-                          coordinates by submitting your level.dat file.
-                        </p>
-                        <footer>
-                          Last Update:<!-- -->
-                          <time datetime="25-04-2024">Apr 25, 2024</time>
-                        </footer>
-                      </div>
-                    </section>
-                  </a>
-                  <div class="hr"></div>
-                  <a
-                    title="Seed Finder for Slime Chunks"
-                    class="sectionwrap last"
-                    href="seed-finder-slimes.html"
-                  >
-                    <section>
-                      <header>
-                        <h2>Seed Finder for Slime Chunks</h2>
-                        <figure class="framed">
-                          <img
-                            alt="Seed Finder for Slime Chunks"
-                            src="https://www.chunkbase.com/img/gallery/seed-finder-slimes_200.webp"
-                          />
-                        </figure>
-                      </header>
-                      <div class="description">
-                        <p class="py-[1em]">
-                          With this Seed Finder App, you can find Minecraft
-                          seeds based on where you want to have slime chunks.
-                        </p>
-                        <footer>
-                          Last Update:<!-- -->
-                          <time datetime="14-11-2014">Nov 14, 2014</time>
-                        </footer>
-                      </div>
-                    </section>
-                  </a>
+                <div id="main-content">
+                    <div id="main" class="">
+                        <article>
+                            <div class="box box overview overview-thumbs">
+                                <header>
+                                    <h1 class="boxheader font-bold">
+                                        Chunk Finders
+                                    </h1>
+                                </header>
+                                <div class="boxcontent">
+                                    <div class="sectionwrap">
+                                        <a
+                                            href="seed-map.html"
+                                            class="alert alert-success-new overview-callout"
+                                            >Want to see everything on one map?
+                                            Check out our<!-- -->
+                                            <span
+                                                class="overview-callout-target"
+                                                >Seed Map App</span
+                                            >!</a
+                                        >
+                                        <p>
+                                            This set of apps allows you to
+                                            easily view different map features
+                                            and find points of interest in your
+                                            minecraft world with just your map
+                                            seed. Version support varies.
+                                        </p>
+                                        <h3>Basic</h3>
+                                        <ul class="modules">
+                                            <li>
+                                                <a
+                                                    href="seed-map.html"
+                                                    title="Seed Map"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-biome-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Seed Map
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="spawn-chunks-reader.html"
+                                                    title="Spawn Chunks Reader"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-biome-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Spawn Chunks
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="seed-finder-slimes.html"
+                                                    title="Slime Chunks"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-biome-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Slime Chunks
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <h3>Popular</h3>
+                                        <ul class="modules">
+                                            <li>
+                                                <a
+                                                    href="biome-finder.html"
+                                                    title="Biome Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-biome-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Biome
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="slime-finder.html"
+                                                    title="Slime Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-slime-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Slime Chunk
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="village-finder.html"
+                                                    title="Village Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-village2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Village
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <h3>Overworld</h3>
+                                        <ul class="modules">
+                                            <li>
+                                                <a
+                                                    href="dungeon-finder.html"
+                                                    title="Dungeon Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-dungeon-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Dungeon
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="stronghold-finder.html"
+                                                    title="Stronghold Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-stronghold-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Stronghold
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="mansion-finder.html"
+                                                    title="Woodland Mansion Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-mansion3-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Mansion
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ocean-monument-finder.html"
+                                                    title="Ocean Monument Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ocean-monument2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Monument
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="pillager-outpost-finder.html"
+                                                    title="Pillager Outpost Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-pillager-outpost2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Pillager Outpost
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="mineshaft-finder.html"
+                                                    title="Mineshaft Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-mineshaft2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Mineshaft
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ruined-portal-finder.html"
+                                                    title="Ruined Portal Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ruined-portal-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Ruined Portal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="jungle-temple-finder.html"
+                                                    title="Jungle Temple Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-jungle-temple-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Jungle Temple
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="desert-temple-finder.html"
+                                                    title="Desert Temple Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-desert-temple-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Desert Temple
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="witch-hut-finder.html"
+                                                    title="Witch Hut Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-witch-hut2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Witch Hut
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="buried-treasure-finder.html"
+                                                    title="Buried Treasure Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-buried-treasure-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Buried Treasure
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="shipwreck-finder.html"
+                                                    title="Shipwreck Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-shipwreck2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Shipwreck
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="igloo-finder.html"
+                                                    title="Igloo Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-igloo2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Igloo
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ocean-ruin-finder.html"
+                                                    title="Ocean Ruin Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ocean-ruin-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Ocean Ruin
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="fossil-finder.html"
+                                                    title="Fossil Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-fossil-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Fossil
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ravine-finder.html"
+                                                    title="Ravine Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ravine-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Ravine
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="amethyst-geode-finder.html"
+                                                    title="Amethyst Geode Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-amethyst-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Amethyst Geode
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ancient-city-finder.html"
+                                                    title="Ancient City Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ancient-city-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Ancient City
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <h3>Nether and End</h3>
+                                        <ul class="modules">
+                                            <li>
+                                                <a
+                                                    href="endcity-finder.html"
+                                                    title="End City Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-end-city-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->End City
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="nether-fortress-finder.html"
+                                                    title="Nether Fortress Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-nether-fortress2-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Nether Fortress
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="ruined-portal-finder.html"
+                                                    title="Ruined Portal Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-ruined-portal-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Ruined Portal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="bastion-remnant-finder.html"
+                                                    title="Bastion Remnant Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-piglin-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Bastion
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="fossil-finder.html"
+                                                    title="Fossil Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-fossil-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->Fossil
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="end-gateway-finder.html"
+                                                    title="End Gateway Finder"
+                                                >
+                                                    <div
+                                                        class="chunk-finders-tn-end-gateway-icon_22"
+                                                        role="img"
+                                                    ></div>
+                                                    <!-- -->End Gateway
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <link
+                            rel="preload"
+                            as="image"
+                            href="https://www.chunkbase.com/img/gallery/seed-map_200.png"
+                        />
+                        <link
+                            rel="preload"
+                            as="image"
+                            href="https://www.chunkbase.com/img/gallery/spawn-chunks-reader_200.webp"
+                        />
+                        <link
+                            rel="preload"
+                            as="image"
+                            href="https://www.chunkbase.com/img/gallery/seed-finder-slimes_200.webp"
+                        />
+                        <article>
+                            <div class="box overview">
+                                <header>
+                                    <h1 class="boxheader font-bold">
+                                        More Apps
+                                    </h1>
+                                </header>
+                                <div class="boxcontent">
+                                    <a
+                                        title="Seed Map"
+                                        class="sectionwrap"
+                                        href="seed-map.html"
+                                    >
+                                        <section>
+                                            <header>
+                                                <h2>Seed Map</h2>
+                                                <figure class="framed">
+                                                    <img
+                                                        alt="Seed Map"
+                                                        src="https://www.chunkbase.com/img/gallery/seed-map_200.png"
+                                                    />
+                                                </figure>
+                                            </header>
+                                            <div class="description">
+                                                <p class="py-[1em]">
+                                                    An online map viewer that
+                                                    helps you find new Minecraft
+                                                    seeds and locate biomes,
+                                                    structures, slime chunks and
+                                                    other features in your
+                                                    current world.
+                                                </p>
+                                                <footer>
+                                                    Last Update:<!-- -->
+                                                    <time datetime="17-06-2025"
+                                                        >Jun 17, 2025</time
+                                                    >
+                                                </footer>
+                                            </div>
+                                        </section>
+                                    </a>
+                                    <div class="hr"></div>
+                                    <a
+                                        title="Spawn Chunks Reader"
+                                        class="sectionwrap"
+                                        href="spawn-chunks-reader.html"
+                                    >
+                                        <section>
+                                            <header>
+                                                <h2>Spawn Chunks Reader</h2>
+                                                <figure class="framed">
+                                                    <img
+                                                        alt="Spawn Chunks Reader"
+                                                        src="https://www.chunkbase.com/img/gallery/spawn-chunks-reader_200.webp"
+                                                    />
+                                                </figure>
+                                            </header>
+                                            <div class="description">
+                                                <p class="py-[1em]">
+                                                    Spawn Chunks Reader provides
+                                                    a quick and easy way to
+                                                    figure out your world&#x27;s
+                                                    spawn chunks and coordinates
+                                                    by submitting your level.dat
+                                                    file.
+                                                </p>
+                                                <footer>
+                                                    Last Update:<!-- -->
+                                                    <time datetime="25-04-2024"
+                                                        >Apr 25, 2024</time
+                                                    >
+                                                </footer>
+                                            </div>
+                                        </section>
+                                    </a>
+                                    <div class="hr"></div>
+                                    <a
+                                        title="Seed Finder for Slime Chunks"
+                                        class="sectionwrap last"
+                                        href="seed-finder-slimes.html"
+                                    >
+                                        <section>
+                                            <header>
+                                                <h2>
+                                                    Seed Finder for Slime Chunks
+                                                </h2>
+                                                <figure class="framed">
+                                                    <img
+                                                        alt="Seed Finder for Slime Chunks"
+                                                        src="https://www.chunkbase.com/img/gallery/seed-finder-slimes_200.webp"
+                                                    />
+                                                </figure>
+                                            </header>
+                                            <div class="description">
+                                                <p class="py-[1em]">
+                                                    With this Seed Finder App,
+                                                    you can find Minecraft seeds
+                                                    based on where you want to
+                                                    have slime chunks.
+                                                </p>
+                                                <footer>
+                                                    Last Update:<!-- -->
+                                                    <time datetime="14-11-2014"
+                                                        >Nov 14, 2014</time
+                                                    >
+                                                </footer>
+                                            </div>
+                                        </section>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <link
+                            rel="preload"
+                            as="image"
+                            href="https://www.chunkbase.com/img/gallery/superflat-2_200.webp"
+                        />
+                        <link
+                            rel="preload"
+                            as="image"
+                            href="https://www.chunkbase.com/img/gallery/compendium_200.png"
+                        />
+                        <article>
+                            <div class="box overview">
+                                <header>
+                                    <h1 class="boxheader font-bold">
+                                        Outdated
+                                    </h1>
+                                </header>
+                                <div class="boxcontent">
+                                    <a
+                                        title="Superflat Generator"
+                                        class="sectionwrap"
+                                        href="superflat-generator.html"
+                                    >
+                                        <section>
+                                            <header>
+                                                <h2>Superflat Generator</h2>
+                                                <figure class="framed">
+                                                    <img
+                                                        alt="Superflat Generator"
+                                                        src="https://www.chunkbase.com/img/gallery/superflat-2_200.webp"
+                                                    />
+                                                </figure>
+                                            </header>
+                                            <div class="description">
+                                                <p class="py-[1em]">
+                                                    This app allows you to
+                                                    create your own superflat
+                                                    presets. Every aspect can be
+                                                    customized. Only for PC.
+                                                </p>
+                                                <footer>
+                                                    Last Update:<!-- -->
+                                                    <time datetime="04-11-2014"
+                                                        >Nov 4, 2014</time
+                                                    >
+                                                </footer>
+                                            </div>
+                                        </section>
+                                    </a>
+                                    <div class="hr"></div>
+                                    <a
+                                        title="Block Compendium"
+                                        class="sectionwrap last"
+                                        href="block-compendium.html"
+                                    >
+                                        <section>
+                                            <header>
+                                                <h2>Block Compendium</h2>
+                                                <figure class="framed">
+                                                    <img
+                                                        alt="Block Compendium"
+                                                        src="https://www.chunkbase.com/img/gallery/compendium_200.png"
+                                                    />
+                                                </figure>
+                                            </header>
+                                            <div class="description">
+                                                <p class="py-[1em]">
+                                                    Not sure which blocks can be
+                                                    set on fire or picked up by
+                                                    endermen? The Block
+                                                    Compendium will answer that
+                                                    and much more, giving you a
+                                                    list of all blocks you can
+                                                    use for your next project.
+                                                </p>
+                                                <footer>
+                                                    Last Update:<!-- -->
+                                                    <time datetime="04-11-2014"
+                                                        >Nov 4, 2014</time
+                                                    >
+                                                </footer>
+                                            </div>
+                                        </section>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="sidebar-wrap">
+                        <div id="sidebar">
+                            <aside>
+                                <div id="recent" class="box">
+                                    <header>
+                                        <h1 class="boxheader font-bold">
+                                            Recent
+                                        </h1>
+                                    </header>
+                                    <div class="boxcontent">
+                                        <img
+                                            class="bullet inline"
+                                            alt="Changed"
+                                            src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
+                                        />
+                                        [App]
+                                        <a
+                                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                                            href="seed-map.html"
+                                            >Seed Map</a
+                                        >
+                                        <p class="indent">Summer Drop Update</p>
+                                        <time datetime="17-06-2025"
+                                            >Jun 17, 2025</time
+                                        >
+                                        <div class="hr"></div>
+                                        <img
+                                            class="bullet inline"
+                                            alt="Changed"
+                                            src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
+                                        />
+                                        [App]
+                                        <a
+                                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                                            href="fossil-finder.html"
+                                            >Fossil Finder</a
+                                        >
+                                        <p class="indent">Summer Drop Update</p>
+                                        <time datetime="17-06-2025"
+                                            >Jun 17, 2025</time
+                                        >
+                                        <div class="hr"></div>
+                                        <img
+                                            class="bullet inline"
+                                            alt="Changed"
+                                            src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
+                                        />
+                                        [App]
+                                        <a
+                                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                                            href="biome-finder.html"
+                                            >Biome Finder</a
+                                        >
+                                        <p class="indent">1.21.5 Update</p>
+                                        <time datetime="25-03-2025"
+                                            >Mar 25, 2025</time
+                                        >
+                                        <div class="hr"></div>
+                                        <img
+                                            class="bullet inline"
+                                            alt="Changed"
+                                            src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
+                                        />
+                                        [App]
+                                        <a
+                                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                                            href="mansion-finder.html"
+                                            >Woodland Mansion Finder</a
+                                        >
+                                        <p class="indent">1.21.5 Update</p>
+                                        <time datetime="25-03-2025"
+                                            >Mar 25, 2025</time
+                                        >
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-              </div>
-            </article>
-            <link
-              rel="preload"
-              as="image"
-              href="https://www.chunkbase.com/img/gallery/superflat-2_200.webp"
-            />
-            <link
-              rel="preload"
-              as="image"
-              href="https://www.chunkbase.com/img/gallery/compendium_200.png"
-            />
-            <article>
-              <div class="box overview">
-                <header>
-                  <h1 class="boxheader font-bold">Outdated</h1>
-                </header>
-                <div class="boxcontent">
-                  <a
-                    title="Superflat Generator"
-                    class="sectionwrap"
-                    href="superflat-generator.html"
-                  >
-                    <section>
-                      <header>
-                        <h2>Superflat Generator</h2>
-                        <figure class="framed">
-                          <img
-                            alt="Superflat Generator"
-                            src="https://www.chunkbase.com/img/gallery/superflat-2_200.webp"
-                          />
-                        </figure>
-                      </header>
-                      <div class="description">
-                        <p class="py-[1em]">
-                          This app allows you to create your own superflat
-                          presets. Every aspect can be customized. Only for PC.
-                        </p>
-                        <footer>
-                          Last Update:<!-- -->
-                          <time datetime="04-11-2014">Nov 4, 2014</time>
-                        </footer>
-                      </div>
-                    </section>
-                  </a>
-                  <div class="hr"></div>
-                  <a
-                    title="Block Compendium"
-                    class="sectionwrap last"
-                    href="block-compendium.html"
-                  >
-                    <section>
-                      <header>
-                        <h2>Block Compendium</h2>
-                        <figure class="framed">
-                          <img
-                            alt="Block Compendium"
-                            src="https://www.chunkbase.com/img/gallery/compendium_200.png"
-                          />
-                        </figure>
-                      </header>
-                      <div class="description">
-                        <p class="py-[1em]">
-                          Not sure which blocks can be set on fire or picked up
-                          by endermen? The Block Compendium will answer that and
-                          much more, giving you a list of all blocks you can use
-                          for your next project.
-                        </p>
-                        <footer>
-                          Last Update:<!-- -->
-                          <time datetime="04-11-2014">Nov 4, 2014</time>
-                        </footer>
-                      </div>
-                    </section>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div id="sidebar-wrap">
-            <div id="sidebar">
-              <aside>
-                <div id="recent" class="box">
-                  <header>
-                    <h1 class="boxheader font-bold">Recent</h1>
-                  </header>
-                  <div class="boxcontent">
-                    <img
-                      class="bullet inline"
-                      alt="Changed"
-                      src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
-                    />
-                    [App]
-                    <a
-                      class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
-                      href="seed-map.html"
-                      >Seed Map</a
-                    >
-                    <p class="indent">Summer Drop Update</p>
-                    <time datetime="17-06-2025">Jun 17, 2025</time>
-                    <div class="hr"></div>
-                    <img
-                      class="bullet inline"
-                      alt="Changed"
-                      src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
-                    />
-                    [App]
-                    <a
-                      class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
-                      href="fossil-finder.html"
-                      >Fossil Finder</a
-                    >
-                    <p class="indent">Summer Drop Update</p>
-                    <time datetime="17-06-2025">Jun 17, 2025</time>
-                    <div class="hr"></div>
-                    <img
-                      class="bullet inline"
-                      alt="Changed"
-                      src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
-                    />
-                    [App]
-                    <a
-                      class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
-                      href="biome-finder.html"
-                      >Biome Finder</a
-                    >
-                    <p class="indent">1.21.5 Update</p>
-                    <time datetime="25-03-2025">Mar 25, 2025</time>
-                    <div class="hr"></div>
-                    <img
-                      class="bullet inline"
-                      alt="Changed"
-                      src="https://www.chunkbase.com/_astro/icon-changed.CPwI8ZaB.png"
-                    />
-                    [App]
-                    <a
-                      class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
-                      href="mansion-finder.html"
-                      >Woodland Mansion Finder</a
-                    >
-                    <p class="indent">1.21.5 Update</p>
-                    <time datetime="25-03-2025">Mar 25, 2025</time>
-                  </div>
-                </div>
-              </aside>
             </div>
-          </div>
-          <div class="clearfix"></div>
+            <footer id="pagefooter">
+                <p class="copyright">
+                    © 2013-<!-- -->2025<!-- -->
+                    chunkbase.com All Rights Reserved.<br />Not an official
+                    Minecraft product. Not approved by or associated with
+                    Mojang.
+                </p>
+                <ul class="navhor">
+                    <li>
+                        <a
+                            title="Site Map"
+                            href="https://www.chunkbase.com/sitemap"
+                            >Site Map</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            title="Contact"
+                            href="https://www.chunkbase.com/contact"
+                            >Contact</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            title="Legal Notice"
+                            href="https://www.chunkbase.com/legal-notice"
+                            >Legal Notice</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            title="Privacy policy"
+                            href="https://www.chunkbase.com/privacy-policy"
+                            >Privacy</a
+                        >
+                    </li>
+                    <li class="last">
+                        <a
+                            title="Terms of Use"
+                            href="https://www.chunkbase.com/terms-of-use"
+                            >Terms</a
+                        >
+                    </li>
+                </ul>
+            </footer>
         </div>
-      </div>
-      <footer id="pagefooter">
-        <p class="copyright">
-          © 2013-<!-- -->2025<!-- -->
-          chunkbase.com All Rights Reserved.<br />Not an official Minecraft
-          product. Not approved by or associated with Mojang.
-        </p>
-        <ul class="navhor">
-          <li>
-            <a title="Site Map" href="https://www.chunkbase.com/sitemap"
-              >Site Map</a
-            >
-          </li>
-          <li>
-            <a title="Contact" href="https://www.chunkbase.com/contact"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              title="Legal Notice"
-              href="https://www.chunkbase.com/legal-notice"
-              >Legal Notice</a
-            >
-          </li>
-          <li>
-            <a
-              title="Privacy policy"
-              href="https://www.chunkbase.com/privacy-policy"
-              >Privacy</a
-            >
-          </li>
-          <li class="last">
-            <a
-              title="Terms of Use"
-              href="https://www.chunkbase.com/terms-of-use"
-              >Terms</a
-            >
-          </li>
-        </ul>
-      </footer>
-    </div>
-  </body>
-  <!-- Mirrored from www.chunkbase.com/apps/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:15:05 GMT -->
+    </body>
+    <!-- Mirrored from www.chunkbase.com/apps/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:15:05 GMT -->
 </html>

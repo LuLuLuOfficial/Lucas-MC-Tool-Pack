@@ -1,19 +1,16 @@
+# Python Dev
+# Virtual environments
+.venv/
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 
 # Distribution / packaging
 dist/
 *.egg-info/
 
-# Virtual environments
-venv/
-.env
 
-# OS generated files
-.DS_Store
-Thumbs.db
 
+# Web Dev
 # Dependency directories
 node_modules/
 

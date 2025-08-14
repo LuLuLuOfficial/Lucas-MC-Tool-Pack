@@ -4,13 +4,13 @@ authors = [
 ]
 dependencies = []
 description = ""
-name = "chunkbase"
+name = "lucas-mc-tool-pack"
 readme = "README.md"
 requires-python = ">=3.12"
 version = "0.1.0"
 
 [tool.poetry]
-packages = [{include = "chunkbase", from = "src"}]
+packages = [{include = "lmtp", from = "src"}]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
