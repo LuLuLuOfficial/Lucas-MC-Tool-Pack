@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en" class="en">
+  <!-- Mirrored from www.chunkbase.com/apps/seed-map by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:52:15 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Seed Map - Minecraft App</title>
+    <meta
+      name="description"
+      content="An online map viewer that helps you find new Minecraft seeds and locate biomes, structures, slime chunks and other features in your current world."
+    />
+    <link rel="canonical" href="seed-map.html" />
+    <link rel="sitemap" href="../sitemap-index.xml" />
+
+    <meta property="og:site_name" content="Chunk Base" />
+    <meta property="og:title" content="Seed Map - Minecraft App" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="An online map viewer that helps you find new Minecraft seeds and locate biomes, structures, slime chunks and other features in your current world."
+    />
+    <meta property="og:url" content="../apps/seed-map" />
+    <meta property="og:image" content="../img/gallery/seed-map_400.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="../img/banner.webp"
+      fetchpriority="high"
+      media="(min-width: 920px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="../img/banner420.webp"
+      media="(max-width: 650px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="../img/banner630.webp"
+      media="(min-width: 651px) and (max-width: 919px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="../img/logo.webp"
+      media="(min-width: 651px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="../img/logo410.webp"
+      media="(max-width: 650px)"
+    />
+    <link rel="stylesheet" href="../_astro/8nv7zFwfz92g.css" />
+    <link rel="stylesheet" href="../_astro/BCAW_d3Aq0zi.css" />
+    <link rel="stylesheet" href="../_astro/C998YiJeDZgt.css" />
+    <style>
+      [data-simplebar] {
+        position: relative;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .simplebar-wrapper {
+        overflow: hidden;
+        width: inherit;
+        height: inherit;
+        max-width: inherit;
+        max-height: inherit;
+      }
+
+      .simplebar-mask {
+        direction: inherit;
+        position: absolute;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        inset: 0;
+        width: auto !important;
+        height: auto !important;
+        z-index: 0;
+      }
+
+      .simplebar-offset {
+        direction: inherit !important;
+        box-sizing: inherit !important;
+        resize: none !important;
+        position: absolute;
+        inset: 0;
+        padding: 0;
+        margin: 0;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .simplebar-content-wrapper {
+        direction: inherit;
+        box-sizing: border-box !important;
+        position: relative;
+        display: block;
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .simplebar-content-wrapper::-webkit-scrollbar,
+      .simplebar-hide-scrollbar::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .simplebar-content:after,
+      .simplebar-content:before {
+        content: " ";
+        display: table;
+      }
+
+      .simplebar-placeholder {
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      .simplebar-height-auto-observer-wrapper {
+        box-sizing: inherit !important;
+        height: 100%;
+        width: 100%;
+        max-width: 1px;
+        position: relative;
+        float: left;
+        max-height: 1px;
+        overflow: hidden;
+        z-index: -1;
+        padding: 0;
+        margin: 0;
+        pointer-events: none;
+        flex-grow: inherit;
+        flex-shrink: 0;
+        flex-basis: 0;
+      }
+
+      .simplebar-height-auto-observer {
+        box-sizing: inherit;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1000%;
+        width: 1000%;
+        min-height: 1px;
+        min-width: 1px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .simplebar-track {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      [data-simplebar].simplebar-dragging,
+      [data-simplebar].simplebar-dragging .simplebar-content {
+        pointer-events: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      [data-simplebar].simplebar-dragging .simplebar-track {
+        pointer-events: all;
+      }
+
+      .simplebar-scrollbar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        min-height: 10px;
+      }
+
+      .simplebar-scrollbar:before {
+        position: absolute;
+        content: "";
+        background: #000;
+        border-radius: 7px;
+        left: 2px;
+        right: 2px;
+        opacity: 0;
+        transition: opacity 0.2s 0.5s linear;
+      }
+
+      .simplebar-scrollbar.simplebar-visible:before {
+        opacity: 0.5;
+        transition-delay: 0s;
+        transition-duration: 0s;
+      }
+
+      .simplebar-track.simplebar-vertical {
+        top: 0;
+        width: 11px;
+      }
+
+      .simplebar-scrollbar:before {
+        inset: 2px;
+      }
+
+      .simplebar-track.simplebar-horizontal {
+        left: 0;
+        height: 11px;
+      }
+
+      .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+        inset: 0 auto 0 0;
+        min-height: 0;
+        min-width: 10px;
+        width: auto;
+      }
+
+      [data-simplebar-direction="rtl"] .simplebar-track.simplebar-vertical {
+        right: auto;
+        left: 0;
+      }
+
+      .simplebar-dummy-scrollbar-size {
+        direction: rtl;
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        height: 500px;
+        width: 500px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: scrollbar !important;
+      }
+
+      .simplebar-dummy-scrollbar-size > div {
+        width: 200%;
+        height: 200%;
+        margin: 10px 0;
+      }
+
+      .simplebar-hide-scrollbar {
+        position: fixed;
+        left: 0;
+        visibility: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div id="content">
+        <header id="pageheader">
+          <div id="navwrap">
+            <nav class="nav">
+              <ul>
+                <li id="navhome" class="">
+                  <a title="Home" href="../index.html">Home</a>
+                </li>
+                <li id="navapps" class="active">
+                  <a title="Minecraft Apps" href="../index.html">Apps</a>
+                </li>
+                <li id="navmods" class="">
+                  <a title="Minecraft Mods" href="../mods/index.html">Mods</a>
+                </li>
+                <li id="navtuts" class="">
+                  <a title="Minecraft Tutorials" href="../tutorials/index.html"
+                    >Tuts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div id="main-content">
+          <div id="main" class="wide">
+            <article>
+              <div class="box">
+                <header>
+                  <h1 class="boxheader font-bold">Seed Map</h1>
+                  <p class="boxinfotop">
+                    Last Update:<!-- -->
+                    <time datetime="17-06-2025"
+                      >Jun 17, 2025<!-- -->
+                      (MC
+                      <!-- -->1.21<!-- -->)</time
+                    >
+                  </p>
+                </header>
+                <div class="boxcontent">
+                  <script
+                    type="module"
+                    src="../_astro/BxpWI5DBim9X.js"
+                  ></script>
+                  <script type="module">
+                    var c = (e, l) => () => (
+                      l || e((l = { exports: {} }).exports, l), l.exports
+                    );
+                    var p = c((u, d) => {
+                      typeof d < "u" && (d = void 0);
+                      typeof u < "u" && (u = void 0);
+                      function v() {
+                        (jQuery.fn.reverse = [].reverse),
+                          (Array.prototype.remove = function (e, l) {
+                            var i = this.slice((l || e) + 1 || this.length);
+                            return (
+                              (this.length = e < 0 ? this.length + e : e),
+                              this.push.apply(this, i)
+                            );
+                          }),
+                          (function (e, l) {
+                            var i = [
+                              "DOMMouseScroll",
+                              "mousewheel",
+                              "MozMousePixelScroll",
+                            ];
+                            if (e.event.fixHooks)
+                              for (var a = i.length; a; )
+                                e.event.fixHooks[i[--a]] = e.event.mouseHooks;
+                            e.event.special.mousewheel = {
+                              setup: function () {
+                                if (this.addEventListener)
+                                  for (var n = i.length; n; )
+                                    this.addEventListener(i[--n], s, !1);
+                                else this.onmousewheel = s;
+                              },
+                              teardown: function () {
+                                if (this.removeEventListener)
+                                  for (var n = i.length; n; )
+                                    this.removeEventListener(i[--n], s, !1);
+                                else this.onmousewheel = null;
+                              },
+                            };
+                            function s(n) {
+                              var t = n || window.event,
+                                o = [].slice.call(arguments, 1),
+                                r = 0,
+                                h = 0,
+                                f = 0;
+                              return (
+                                (n = e.event.fix(t)),
+                                (n.type = "mousewheel"),
+                                t.wheelDelta && (r = t.wheelDelta / 120),
+                                t.detail &&
+                                  (t.type == i[2]
+                                    ? (this.removeEventListener(i[0], s, !1),
+                                      (r = -t.detail / 42))
+                                    : (r = -t.detail / 3)),
+                                (f = r),
+                                t.axis !== l &&
+                                  t.axis === t.HORIZONTAL_AXIS &&
+                                  ((f = 0), (h = -1 * r)),
+                                t.wheelDeltaY !== l &&
+                                  (f = t.wheelDeltaY / 120),
+                                t.wheelDeltaX !== l &&
+                                  (h = (-1 * t.wheelDeltaX) / 120),
+                                o.unshift(n, r, h, f),
+                                (e.event.dispatch || e.event.handle).apply(
+                                  this,
+                                  o
+                                )
+                              );
+                            }
+                          })(jQuery),
+                          (function (e) {
+                            var l = '[data-dismiss="alert"]',
+                              i = function (a) {
+                                e(a).on("click", l, this.close);
+                              };
+                            (i.prototype.close = function (a) {
+                              var s = e(this),
+                                n = s.attr("data-target"),
+                                t;
+                              if (
+                                (n ||
+                                  ((n = s.attr("href")),
+                                  (n = n && n.replace(/.*(?=#[^\s]*$)/, ""))),
+                                (t = e(n)),
+                                a && a.preventDefault(),
+                                t.length ||
+                                  (t = s.hasClass("alert") ? s : s.parent()),
+                                t.trigger((a = e.Event("close"))),
+                                a.isDefaultPrevented())
+                              )
+                                return;
+                              t.removeClass("in");
+                              function o() {
+                                t.trigger("closed").remove();
+                              }
+                              e.support.transition && t.hasClass("fade")
+                                ? t.on(e.support.transition.end, o)
+                                : o();
+                            }),
+                              (e.fn.alert = function (a) {
+                                return this.each(function () {
+                                  var s = e(this),
+                                    n = s.data("alert");
+                                  n || s.data("alert", (n = new i(this))),
+                                    typeof a == "string" && n[a].call(s);
+                                });
+                              }),
+                              (e.fn.alert.Constructor = i),
+                              e(function () {
+                                e("body").on(
+                                  "click.alert.data-api",
+                                  l,
+                                  i.prototype.close
+                                );
+                              });
+                          })(window.jQuery);
+                      }
+                      v.call(typeof window < "u" ? window : globalThis);
+                    });
+                    export default p();
+                    //# sourceMappingURL=BouGFFQm2usq.js.map
+                  </script>
+                  <script type="module">
+                    var l = (u, r) => () => (
+                      r || u((r = { exports: {} }).exports, r), r.exports
+                    );
+                    var a = l((o, t) => {
+                      typeof t < "u" && (t = void 0);
+                      typeof o < "u" && (o = void 0);
+                      function d() {
+                        function u(n, i) {
+                          if (
+                            typeof n == "object" &&
+                            n != null &&
+                            typeof i == "object" &&
+                            i != null
+                          ) {
+                            var f = [0, 0];
+                            for (var e in n) f[0]++;
+                            for (var e in i) f[1]++;
+                            if (f[0] - f[1] !== 0) return !1;
+                            for (var e in n)
+                              if (!(e in i) || !u(n[e], i[e])) return !1;
+                            for (var e in i)
+                              if (!(e in n) || !u(i[e], n[e])) return !1;
+                            return !0;
+                          } else return n === i;
+                        }
+                        function r(n, i) {
+                          var f;
+                          return function () {
+                            clearTimeout(f);
+                            var e = arguments;
+                            f = setTimeout(function () {
+                              n.apply(this, e);
+                            }, i || 1);
+                          };
+                        }
+                        (globalThis.deepEqual = u),
+                          (globalThis.__CB__debounce = r);
+                      }
+                      d.call(typeof window < "u" ? window : globalThis);
+                    });
+                    export default a();
+                    //# sourceMappingURL=DG3VTVBP6MKW.js.map
+                  </script>
+                  <script
+                    type="module"
+                    src="../_astro/CcJokKCdAzaV.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/B9STObB0XZlt.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/DwsCJuwWEbkt.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/o8kJgSWJGDTl.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/CK3z0VthdK9C.js"
+                  ></script>
+                  <script>
+                    window.CB3FinderAppConfig = {
+                      "pois": "all",
+                      "initiallyVisiblePois": [
+                        "spawn",
+                        "village",
+                        "buriedTreasure",
+                        "bastionRemnant",
+                        "endCity",
+                        "trialChamber",
+                        "netherFortress",
+                        "ruinedPortalOverworld",
+                        "ancientCity",
+                        "slimeChunk",
+                        "woodlandMansion",
+                      ],
+                      "dimensions": ["overworld", "nether", "end"],
+                      "showBiomeFilter": true,
+                      "hideGridLines": true,
+                      "showHeightsToggle": true,
+                      "showBiomeHeightSelection": true,
+                      "filterPoisByZoomLevel": true,
+                      "renderImg": true,
+                      "chunkWidths": "full",
+                    };
+                  </script>
+                  <script
+                    type="module"
+                    src="../_astro/DvDPuTmQ6t80.js"
+                  ></script>
+                  <script type="module">
+                    var p = (u, h) => () => (
+                      h || u((h = { exports: {} }).exports, h), h.exports
+                    );
+                    var w = p((m, g) => {
+                      typeof g < "u" && (g = void 0);
+                      typeof m < "u" && (m = void 0);
+                      function _() {
+                        var u = (function () {
+                          function f(i, n) {
+                            var t;
+                            if (
+                              typeof Symbol > "u" ||
+                              i[Symbol.iterator] == null
+                            ) {
+                              if (Array.isArray(i) || (t = o(i)) || n) {
+                                t && (i = t);
+                                var e = 0;
+                                return function () {
+                                  return e >= i.length
+                                    ? { done: !0 }
+                                    : { done: !1, value: i[e++] };
+                                };
+                              }
+                              throw new TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+                            }
+                            return (t = i[Symbol.iterator]()), t.next.bind(t);
+                          }
+                          function o(i, n) {
+                            if (i) {
+                              if (typeof i == "string") return a(i, n);
+                              var t = Object.prototype.toString
+                                .call(i)
+                                .slice(8, -1);
+                              if (
+                                (t === "Object" &&
+                                  i.constructor &&
+                                  (t = i.constructor.name),
+                                t === "Map" || t === "Set")
+                              )
+                                return Array.from(i);
+                              if (
+                                t === "Arguments" ||
+                                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
+                                  t
+                                )
+                              )
+                                return a(i, n);
+                            }
+                          }
+                          function a(i, n) {
+                            (n == null || n > i.length) && (n = i.length);
+                            for (var t = 0, e = new Array(n); t < n; t++)
+                              e[t] = i[t];
+                            return e;
+                          }
+                          function l(i, n) {
+                            for (var t = 0; t < n.length; t++) {
+                              var e = n[t];
+                              (e.enumerable = e.enumerable || !1),
+                                (e.configurable = !0),
+                                "value" in e && (e.writable = !0),
+                                Object.defineProperty(i, e.key, e);
+                            }
+                          }
+                          function c(i, n, t) {
+                            return n && l(i.prototype, n), i;
+                          }
+                          var s = (function () {
+                            function i(t) {
+                              if (
+                                (t === void 0 && (t = {}),
+                                !(t.maxSize && t.maxSize > 0))
+                              )
+                                throw new TypeError(
+                                  "`maxSize` must be a number greater than 0"
+                                );
+                              (this.maxSize = t.maxSize),
+                                (this.onEviction = t.onEviction),
+                                (this.cache = new Map()),
+                                (this.oldCache = new Map()),
+                                (this._size = 0);
+                            }
+                            var n = i.prototype;
+                            return (
+                              (n._set = function (e, r) {
+                                if (
+                                  (this.cache.set(e, r),
+                                  this._size++,
+                                  this._size >= this.maxSize)
+                                ) {
+                                  if (
+                                    ((this._size = 0),
+                                    typeof this.onEviction == "function")
+                                  )
+                                    for (
+                                      var d = f(this.oldCache.entries()), v;
+                                      !(v = d()).done;
+
+                                    ) {
+                                      var b = v.value,
+                                        y = b[0],
+                                        z = b[1];
+                                      this.onEviction(y, z);
+                                    }
+                                  (this.oldCache = this.cache),
+                                    (this.cache = new Map());
+                                }
+                              }),
+                              (n.get = function (e) {
+                                if (this.cache.has(e)) return this.cache.get(e);
+                                if (this.oldCache.has(e)) {
+                                  var r = this.oldCache.get(e);
+                                  return (
+                                    this.oldCache.delete(e), this._set(e, r), r
+                                  );
+                                }
+                              }),
+                              (n.set = function (e, r) {
+                                return (
+                                  this.cache.has(e)
+                                    ? this.cache.set(e, r)
+                                    : this._set(e, r),
+                                  this
+                                );
+                              }),
+                              (n.has = function (e) {
+                                return (
+                                  this.cache.has(e) || this.oldCache.has(e)
+                                );
+                              }),
+                              (n.peek = function (e) {
+                                if (this.cache.has(e)) return this.cache.get(e);
+                                if (this.oldCache.has(e))
+                                  return this.oldCache.get(e);
+                              }),
+                              (n.delete = function (e) {
+                                var r = this.cache.delete(e);
+                                return (
+                                  r && this._size--,
+                                  this.oldCache.delete(e) || r
+                                );
+                              }),
+                              (n.clear = function () {
+                                this.cache.clear(),
+                                  this.oldCache.clear(),
+                                  (this._size = 0);
+                              }),
+                              c(i, [
+                                {
+                                  key: "size",
+                                  get: function () {
+                                    for (
+                                      var e = 0, r = f(this.oldCache.keys()), d;
+                                      !(d = r()).done;
+
+                                    ) {
+                                      var v = d.value;
+                                      this.cache.has(v) || e++;
+                                    }
+                                    return Math.min(
+                                      this._size + e,
+                                      this.maxSize
+                                    );
+                                  },
+                                },
+                              ]),
+                              i
+                            );
+                          })();
+                          return s;
+                        })();
+                        function h(f, o) {
+                          var a = new u(o),
+                            l = function () {
+                              var c = o.hash.apply(null, arguments);
+                              if (a.has(c)) return a.get(c);
+                              var s = f.apply(null, arguments);
+                              return typeof s < "u" && a.set(c, s), s;
+                            };
+                          return (
+                            (l.clear = function () {
+                              a.clear();
+                            }),
+                            l
+                          );
+                        }
+                        (globalThis.QuickLRU = u),
+                          (globalThis.memoizeQuickLRU = h);
+                      }
+                      _.call(typeof window < "u" ? window : globalThis);
+                    });
+                    export default w();
+                    //# sourceMappingURL=CWS83T5K0AZU.js.map
+                  </script>
+                  <script
+                    type="module"
+                    src="../_astro/BlaEHIAlGKQx.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/Cc9E-Fzz4Wgb.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/D42fwkYkyGxa.js"
+                  ></script>
+                  <script type="module">
+                    var f = {
+                      init: function (d) {
+                        var r = new QuickLRU({ maxSize: 32 }),
+                          s = {};
+                        d.forEach(function (t, h) {
+                          t.addEventListener(
+                            "message",
+                            function (e) {
+                              if (e.data.type === "sharedTaskPerformResult") {
+                                var a = e.data.key,
+                                  i = e.data.result;
+                                r.set(a, i),
+                                  s[a].forEach(function (n) {
+                                    n(i);
+                                  }),
+                                  delete s[a];
+                              } else if (e.data.type === "sharedTaskGet") {
+                                var a = e.data.key;
+                                if (r.has(a)) {
+                                  t.postMessage({
+                                    type: "sharedTaskResult",
+                                    key: a,
+                                    result: r.get(a),
+                                  });
+                                  return;
+                                }
+                                if (s[a]) {
+                                  s[a].push(function (u) {
+                                    t.postMessage({
+                                      type: "sharedTaskResult",
+                                      key: a,
+                                      result: u,
+                                    });
+                                  });
+                                  return;
+                                }
+                                (s[a] = []),
+                                  t.postMessage({
+                                    type: "sharedTaskPerform",
+                                    key: a,
+                                  });
+                              }
+                            },
+                            !1
+                          );
+                        });
+                      },
+                    };
+                    globalThis.CB3SharedTaskManagerMain = f;
+                    //# sourceMappingURL=Ckm0lHGQKlNd.js.map
+                  </script>
+                  <script
+                    type="module"
+                    src="../_astro/Bxr3bmFIwOLH.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/__13OC-0RA8Z.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/DMtd6uAMYWXI.js"
+                  ></script>
+                  <script
+                    type="module"
+                    src="../_astro/B_-HEsl-bAIC.js"
+                  ></script>
+                  <noscript>
+                    JavaScript is required for this application!
+                  </noscript>
+                  <div class="app-loader-container">
+                    <img
+                      class="loader"
+                      src="../img/loading.gif"
+                      loading="lazy"
+                      alt="Loading..."
+                    />
+                  </div>
+                  <div id="app" class="hidden-invisible">
+                    <div id="seed-controls">
+                      <div class="fancy-box">
+                        <div class="fancy-row">
+                          <label for="seed" class="fancy-size">种子:</label>
+                          <div class="fancy-inputs">
+                            <input
+                              class="m-0 box-content inline-block h-[18px] rounded-[3px] border-[1px] border-[solid] bg-[#ffffff] p-[4px] align-baseline font-[Arial,_Helvetica,_sans-serif] text-[13px] leading-[normal] font-normal text-[#555555] [box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075)] [transition:border_linear_0.2s,_box-shadow_linear_0.2s] disabled:cursor-default disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:border-[rgba(82,_168,_236,_0.8)] focus:[box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075),_0_0_8px_rgba(82,_168,_236,_0.6)] focus:outline-[0] focus:outline-[thin_dotted_\9] read-only:border-[#ddd] read-only:bg-[#eeeeee] placeholder:text-[#999999]"
+                              id="seed"
+                              maxlength="32"
+                              placeholder="Enter the seed of your world"
+                              type="text"
+                              name="seed"
+                            />
+                            <div class="fancy-inputs-section" id="seed-actions">
+                              <button
+                                id="seed-load"
+                                class="gh-button icon curvedarrow hidden"
+                                type="button"
+                              >
+                                从存档加载...
+                              </button>
+                              <input
+                                type="file"
+                                class="hidden"
+                                id="seed-file"
+                              />
+                              <button
+                                id="seed-random"
+                                class="gh-button icon boxicon"
+                                type="button"
+                              >
+                                随机种子
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fancy-row">
+                          <label for="platform" class="fancy-size">版本:</label>
+                          <div class="fancy-inputs">
+                            <select
+                              class="inline-block h-[28px] w-[220px] border-[1px] border-[solid] bg-white p-[4px] font-[&quot;Helvetica_Neue&quot;,_Helvetica,_Arial,_sans-serif] text-[13px] leading-[28px] font-normal text-[#555555] disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:outline-offset-[-2px] focus:outline-[5px_auto_-webkit-focus-ring-color] focus:outline-[thin_dotted_#333]"
+                              id="platform"
+                            >
+                              <optgroup label="Latest Versions">
+                                <option value="java_1_21_6">
+                                  Java 1.21.6 - 1.21.8
+                                </option>
+                                <option value="java_1_21_6_lb">
+                                  Java 1.21.6 - 1.21.8 Large Biomes
+                                </option>
+                                <option value="bedrock_1_21_90">
+                                  Bedrock 1.21.90 - 1.21.100
+                                </option>
+                              </optgroup>
+                              <optgroup label="Java Edition">
+                                <option value="java_1_21_6">
+                                  Java 1.21.6 - 1.21.8
+                                </option>
+                                <option value="java_1_21_5">Java 1.21.5</option>
+                                <option value="java_1_21_4">Java 1.21.4</option>
+                                <option value="java_1_21_2">
+                                  Java 1.21.2 - 1.21.3
+                                </option>
+                                <option value="java_1_21">
+                                  Java 1.21 - 1.21.1
+                                </option>
+                                <option value="java_1_20">Java 1.20</option>
+                                <option value="java_1_19_3">
+                                  Java 1.19.3 - 1.19.4
+                                </option>
+                                <option value="java_1_19">
+                                  Java 1.19 - 1.19.2
+                                </option>
+                                <option value="java_1_18">Java 1.18</option>
+                                <option value="java_1_17">Java 1.17</option>
+                                <option value="java_1_16">Java 1.16</option>
+                                <option value="java_1_15">Java 1.15</option>
+                                <option value="java_1_14">Java 1.14</option>
+                                <option value="java_1_13">Java 1.13</option>
+                                <option value="java_1_12">Java 1.12</option>
+                                <option value="java_1_11">Java 1.11</option>
+                                <option value="java_1_10">Java 1.10</option>
+                                <option value="java_1_9">Java 1.9</option>
+                                <option value="java_1_8">Java 1.8</option>
+                                <option value="java_1_7">Java 1.7</option>
+                              </optgroup>
+                              <optgroup label="Java Edition - Large Biomes">
+                                <option value="java_1_21_6_lb">
+                                  Java 1.21.6 - 1.21.8 (LB)
+                                </option>
+                                <option value="java_1_21_5_lb">
+                                  Java 1.21.5 (LB)
+                                </option>
+                                <option value="java_1_21_4_lb">
+                                  Java 1.21.4 (LB)
+                                </option>
+                                <option value="java_1_21_2_lb">
+                                  Java 1.21.2 - 1.21.3 (LB)
+                                </option>
+                                <option value="java_1_21_lb">
+                                  Java 1.21 - 1.21.1 (LB)
+                                </option>
+                                <option value="java_1_20_lb">
+                                  Java 1.20 (LB)
+                                </option>
+                                <option value="java_1_19_3_lb">
+                                  Java 1.19.3 - 1.19.4 (LB)
+                                </option>
+                                <option value="java_1_19_lb">
+                                  Java 1.19 - 1.19.2 (LB)
+                                </option>
+                                <option value="java_1_18_lb">
+                                  Java 1.18 (LB)
+                                </option>
+                                <option value="java_1_17_lb">
+                                  Java 1.17 (LB)
+                                </option>
+                                <option value="java_1_16_lb">
+                                  Java 1.16 (LB)
+                                </option>
+                                <option value="java_1_15_lb">
+                                  Java 1.15 (LB)
+                                </option>
+                                <option value="java_1_14_lb">
+                                  Java 1.14 (LB)
+                                </option>
+                                <option value="java_1_13_lb">
+                                  Java 1.13 (LB)
+                                </option>
+                                <option value="java_1_12_lb">
+                                  Java 1.12 (LB)
+                                </option>
+                                <option value="java_1_11_lb">
+                                  Java 1.11 (LB)
+                                </option>
+                                <option value="java_1_10_lb">
+                                  Java 1.10 (LB)
+                                </option>
+                                <option value="java_1_9_lb">
+                                  Java 1.9 (LB)
+                                </option>
+                                <option value="java_1_8_lb">
+                                  Java 1.8 (LB)
+                                </option>
+                                <option value="java_1_7_lb">
+                                  Java 1.7 (LB)
+                                </option>
+                              </optgroup>
+                              <optgroup label="Bedrock Edition">
+                                <option value="bedrock_1_21_90">
+                                  Bedrock 1.21.90 - 1.21.100
+                                </option>
+                                <option value="bedrock_1_21_60">
+                                  Bedrock 1.21.60 - 1.21.84
+                                </option>
+                                <option value="bedrock_1_21_50">
+                                  Bedrock 1.21.50
+                                </option>
+                                <option value="bedrock_1_21">
+                                  Bedrock 1.21 - 1.21.40
+                                </option>
+                                <option value="bedrock_1_20_60">
+                                  Bedrock 1.20.60 - 1.20.81
+                                </option>
+                                <option value="bedrock_1_20">
+                                  Bedrock 1.20.0 - 1.20.51
+                                </option>
+                                <option value="bedrock_1_19">
+                                  Bedrock 1.19
+                                </option>
+                                <option value="bedrock_1_18">
+                                  Bedrock 1.18
+                                </option>
+                                <option value="bedrock_1_17">
+                                  Bedrock 1.17
+                                </option>
+                                <option value="bedrock_1_16">
+                                  Bedrock 1.16
+                                </option>
+                                <option value="bedrock_1_14">
+                                  Bedrock 1.14
+                                </option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </div>
+                        <div id="biome-dimension-selection" class="fancy-row">
+                          <label for="biome-dimension-select">维度:</label>
+                          <div class="fancy-inputs">
+                            <select
+                              class="inline-block h-[28px] w-[220px] border-[1px] border-[solid] bg-white p-[4px] font-[&quot;Helvetica_Neue&quot;,_Helvetica,_Arial,_sans-serif] text-[13px] leading-[28px] font-normal text-[#555555] disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:outline-offset-[-2px] focus:outline-[5px_auto_-webkit-focus-ring-color] focus:outline-[thin_dotted_#333]"
+                              id="biome-dimension-select"
+                            >
+                              <option value="overworld">主世界</option>
+                              <option value="nether">下界</option>
+                              <option value="end">末地</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="seed-footer">
+                        <div id="seed-dragdrop-hint" class="fancy-description">
+                          Tips: 您可以将 level.dat 拖放至此处!
+                        </div>
+                      </div>
+                      <div id="seed-dropbox" class="hidden">
+                        <p class="popup">Drop level.dat anywhere...</p>
+                      </div>
+                      <div class="hr slim"></div>
+                      <div id="seed-errors"></div>
+                      <div class="seedmap-layers-wrapper">
+                        <div class="seedmap-layers-label">特征</div>
+                        <div class="seedmap-layers-warning">
+                          ⚠ 通过缩放以显示所有选定的特征
+                        </div>
+                        <div data-simplebar>
+                          <div>
+                            <div id="seedmap-layers">
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Biomes"
+                                data-poi="biomes"
+                              >
+                                <div
+                                  class="chunk-finders-tn-biome-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >生物群系</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Spawn Point"
+                                data-poi="spawn"
+                              >
+                                <div
+                                  class="chunk-finders-tn-spawn-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">出生点</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Slime Chunk"
+                                data-poi="slimeChunk"
+                              >
+                                <div
+                                  class="chunk-finders-tn-slime-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >史莱姆区块</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Village"
+                                data-poi="village"
+                              >
+                                <div
+                                  class="chunk-finders-tn-village2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">村庄</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ancient City"
+                                data-poi="ancientCity"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ancient-city-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >远古城市</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Dungeon"
+                                data-poi="dungeon"
+                              >
+                                <div
+                                  class="chunk-finders-tn-dungeon-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">地牢</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Stronghold"
+                                data-poi="stronghold"
+                              >
+                                <div
+                                  class="chunk-finders-tn-stronghold-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">要塞</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Woodland Mansion"
+                                data-poi="woodlandMansion"
+                              >
+                                <div
+                                  class="chunk-finders-tn-mansion3-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >林地府邸</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ocean Monument"
+                                data-poi="oceanMonument"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ocean-monument2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >海底神殿</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Pillager Outpost"
+                                data-poi="pillagerOutpost"
+                              >
+                                <div
+                                  class="chunk-finders-tn-pillager-outpost2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >掠夺者前哨站</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Mineshaft"
+                                data-poi="mineshaft"
+                              >
+                                <div
+                                  class="chunk-finders-tn-mineshaft2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >废弃矿井</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ruined Portal"
+                                data-poi="ruinedPortalOverworld"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ruined-portal-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >废弃传送门</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Jungle Temple"
+                                data-poi="jungleTemple"
+                              >
+                                <div
+                                  class="chunk-finders-tn-jungle-temple-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >丛林神庙</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Desert Temple"
+                                data-poi="desertTemple"
+                              >
+                                <div
+                                  class="chunk-finders-tn-desert-temple-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >沙漠神殿</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Witch Hut"
+                                data-poi="witchHut"
+                              >
+                                <div
+                                  class="chunk-finders-tn-witch-hut2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >女巫小屋</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Buried Treasure"
+                                data-poi="buriedTreasure"
+                              >
+                                <div
+                                  class="chunk-finders-tn-buried-treasure-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >埋藏的宝藏</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Shipwreck"
+                                data-poi="shipwreck"
+                              >
+                                <div
+                                  class="chunk-finders-tn-shipwreck2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">沉船</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Igloo"
+                                data-poi="igloo"
+                              >
+                                <div
+                                  class="chunk-finders-tn-igloo2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">雪屋</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ocean Ruins"
+                                data-poi="oceanRuin"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ocean-ruin-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >海底废墟</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Fossil"
+                                data-poi="fossil"
+                              >
+                                <div
+                                  class="chunk-finders-tn-fossil-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">化石</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Cave"
+                                data-poi="cave"
+                              >
+                                <div
+                                  class="chunk-finders-tn-cave-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">洞穴</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ravine"
+                                data-poi="ravine"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ravine-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">峡谷</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Underground Lava Pool"
+                                data-poi="lavaPool"
+                              >
+                                <div
+                                  class="chunk-finders-tn-lava-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >地下岩浆池</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="End City"
+                                data-poi="endCity"
+                              >
+                                <div
+                                  class="chunk-finders-tn-end-city-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">末地城</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="End Gateway"
+                                data-poi="endGateway"
+                              >
+                                <div
+                                  class="chunk-finders-tn-end-gateway-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >末地折跃门</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Nether Fortress"
+                                data-poi="netherFortress"
+                              >
+                                <div
+                                  class="chunk-finders-tn-nether-fortress2-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >下界要塞</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Bastion Remnant"
+                                data-poi="bastionRemnant"
+                              >
+                                <div
+                                  class="chunk-finders-tn-piglin-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">Bastion</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ruined Portal"
+                                data-poi="ruinedPortalNether"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ruined-portal-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >废弃传送门</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Amethyst Geode"
+                                data-poi="amethystGeode"
+                              >
+                                <div
+                                  class="chunk-finders-tn-amethyst-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">紫晶洞</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Enchanted Golden Apple"
+                                data-poi="itemOverworld"
+                              >
+                                <div
+                                  class="chunk-finders-tn-golden-apple-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >附魔金苹果</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Ore Veins"
+                                data-poi="oreVein"
+                              >
+                                <div
+                                  class="chunk-finders-tn-ore-vein-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name">矿脉</span>
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Desert Well"
+                                data-poi="desertWell"
+                              >
+                                <div
+                                  class="chunk-finders-tn-desert-well-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >沙漠水井</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Trail Ruins"
+                                data-poi="trailRuin"
+                              >
+                                <div
+                                  class="chunk-finders-tn-trail-ruin-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >古迹废墟</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Trial Chamber"
+                                data-poi="trialChamber"
+                              >
+                                <div
+                                  class="chunk-finders-tn-trial-chamber-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >试炼密室</span
+                                >
+                              </button>
+                              <button
+                                aria-checked="false"
+                                type="button"
+                                role="checkbox"
+                                title="Nether Fossil"
+                                data-poi="fossilNether"
+                              >
+                                <div
+                                  class="chunk-finders-tn-fossil-icon_22"
+                                  role="img"
+                                ></div>
+                                <span class="seedmap-layers-name"
+                                  >下界化石</span
+                                >
+                              </button>
+                            </div>
+                            <div class="seedmap-checkall">
+                              <button class="unstyled" id="seedmap-checkall">
+                                <i class="icon-check"></i> Select all
+                              </button>
+                              <button class="unstyled" id="seedmap-uncheckall">
+                                <i class="icon-check-empty"></i> Deselect all
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <button id="seedmap-layers-toggle-hor">▼</button>
+                      </div>
+                      <canvas
+                        data-tippy-content=""
+                        id="map-canvas"
+                        role="img"
+                        aria-label="A map showing the minecraft world"
+                      ></canvas>
+                      <div id="map-controls-errors"></div>
+                      <div id="map-controls-wrap">
+                        <div id="map-controls" class="full-width">
+                          <div id="map-zoom">
+                            <div id="map-zoom-slider"></div>
+                          </div>
+                          <div class="map-controls-flex">
+                            <div id="biome-selection" class="fancy-box">
+                              <label id="biome-checkbox-label">
+                                <input
+                                  type="checkbox"
+                                  id="biome-selection-checkbox"
+                                />
+                                高亮生物群系:
+                              </label>
+                              <div id="biome-selection-select-wrap">
+                                <input
+                                  type="hidden"
+                                  id="biome-selection-select"
+                                  multiple="multiple"
+                                />
+                              </div>
+                            </div>
+                            <div id="biome-height-select-box" class="fancy-box">
+                              <label for="biome-height-select"
+                                >生物群系高度:</label
+                              >
+                              <select
+                                class="inline-block h-[28px] w-[220px] border-[1px] border-[solid] bg-white p-[4px] font-[&quot;Helvetica_Neue&quot;,_Helvetica,_Arial,_sans-serif] text-[13px] leading-[28px] font-normal text-[#555555] disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:outline-offset-[-2px] focus:outline-[5px_auto_-webkit-focus-ring-color] focus:outline-[thin_dotted_#333]"
+                                id="biome-height-select"
+                              >
+                                <option value="depth0">地表</option>
+                                <option value="caveDepth">地底</option>
+                                <option value="bottom">底层 (Y -51)</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div id="map-controls-bar">
+                            <div class="map-controls-flex">
+                              <div class="fancy-box" id="map-goto">
+                                <div class="fancy-row slim">
+                                  <label for="map-goto-x">X:</label>
+                                  <input
+                                    class="m-0 box-content inline-block h-[18px] rounded-[3px] border-[1px] border-[solid] bg-[#ffffff] p-[4px] align-baseline font-[Arial,_Helvetica,_sans-serif] text-[13px] leading-[normal] font-normal text-[#555555] [box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075)] [transition:border_linear_0.2s,_box-shadow_linear_0.2s] disabled:cursor-default disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:border-[rgba(82,_168,_236,_0.8)] focus:[box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075),_0_0_8px_rgba(82,_168,_236,_0.6)] focus:outline-[0] focus:outline-[thin_dotted_\9] read-only:border-[#ddd] read-only:bg-[#eeeeee] placeholder:text-[#999999] mini"
+                                    id="map-goto-x"
+                                    type="text"
+                                    name="map-goto-x"
+                                  />
+                                  <label for="map-goto-z">Z:</label>
+                                  <input
+                                    class="m-0 box-content inline-block h-[18px] rounded-[3px] border-[1px] border-[solid] bg-[#ffffff] p-[4px] align-baseline font-[Arial,_Helvetica,_sans-serif] text-[13px] leading-[normal] font-normal text-[#555555] [box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075)] [transition:border_linear_0.2s,_box-shadow_linear_0.2s] disabled:cursor-default disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:border-[rgba(82,_168,_236,_0.8)] focus:[box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075),_0_0_8px_rgba(82,_168,_236,_0.6)] focus:outline-[0] focus:outline-[thin_dotted_\9] read-only:border-[#ddd] read-only:bg-[#eeeeee] placeholder:text-[#999999] mini"
+                                    id="map-goto-z"
+                                    type="text"
+                                    name="map-goto-z"
+                                  />
+                                  <button
+                                    id="map-goto-go"
+                                    class="gh-button icon pin"
+                                  >
+                                    前往!
+                                  </button>
+                                </div>
+                              </div>
+                              <div id="map-misc" class="fancy-box">
+                                <button
+                                  id="map-theater"
+                                  type="button"
+                                  class="gh-button icon enter-full-screen"
+                                >
+                                  扩展
+                                </button>
+                                <button
+                                  id="map-share"
+                                  type="button"
+                                  class="gh-button icon share"
+                                >
+                                  分享
+                                </button>
+                                <div style="display: none">
+                                  <div id="map-share-popover-content">
+                                    <div id="map-share-map-row">
+                                      <img
+                                        id="map-share-map-preview"
+                                        class="inline"
+                                      />
+                                      <div id="map-share-map-input-row">
+                                        <button
+                                          id="map-share-map-download"
+                                          type="button"
+                                          class="gh-button icon download"
+                                        >
+                                          保存
+                                        </button>
+                                        <button
+                                          id="map-share-map-share"
+                                          type="button"
+                                          class="gh-button icon share"
+                                        >
+                                          分享
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <hr class="my-4" />
+                                    <div id="map-share-link-row">
+                                      <input
+                                        class="m-0 box-content inline-block h-[18px] rounded-[3px] border-[1px] border-[solid] bg-[#ffffff] p-[4px] align-baseline font-[Arial,_Helvetica,_sans-serif] text-[13px] leading-[normal] font-normal text-[#555555] [box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075)] [transition:border_linear_0.2s,_box-shadow_linear_0.2s] disabled:cursor-default disabled:border-[#ddd] disabled:bg-[#eeeeee] focus:border-[rgba(82,_168,_236,_0.8)] focus:[box-shadow:inset_0_1px_1px_rgba(0,_0,_0,_0.075),_0_0_8px_rgba(82,_168,_236,_0.6)] focus:outline-[0] focus:outline-[thin_dotted_\9] read-only:border-[#ddd] read-only:bg-[#eeeeee] placeholder:text-[#999999]"
+                                        id="map-share-link-text"
+                                        readonly=""
+                                        type="text"
+                                      />
+                                      <div>
+                                        <button
+                                          id="map-share-link-copy"
+                                          type="button"
+                                          class="gh-button icon copy"
+                                        >
+                                          复制
+                                        </button>
+                                        <button
+                                          id="map-share-link-share"
+                                          type="button"
+                                          class="gh-button icon share"
+                                        >
+                                          分享
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="map-misc" class="fancy-box">
+                                <label id="show-heights-label">
+                                  <input
+                                    type="checkbox"
+                                    id="show-heights-checkbox"
+                                  />
+                                  显示地形
+                                </label>
+                              </div>
+                              <div id="map-misc" class="fancy-box">
+                                <label id="show-grid-lines-label">
+                                  <input
+                                    type="checkbox"
+                                    checked="checked"
+                                    id="show-grid-lines"
+                                  />
+                                  显示网格
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </article>
+            <script type="module">
+              const o = document.getElementById("comments");
+              if (o) {
+                const t = new IntersectionObserver(
+                  (c) => {
+                    c.forEach((n) => {
+                      if (n.isIntersecting) {
+                        const e = document.createElement("script");
+                        (e.src = "https://talk.hyvor.com/embed/embed.js"),
+                          (e.async = !0),
+                          (e.type = "module"),
+                          document.head.appendChild(e),
+                          t.unobserve(n.target);
+                      }
+                    });
+                  },
+                  { rootMargin: "100px" }
+                );
+                t.observe(o);
+              }
+              //# sourceMappingURL=BFSZYcadLEko.js.map
+            </script>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Mirrored from www.chunkbase.com/apps/seed-map by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 18:52:23 GMT -->
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="en" prefix="og: http://ogp.me/ns#">
+    <!-- Mirrored from www.chunkbase.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 14:29:42 GMT -->
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Chunk Base | Modify By Lucas</title>
+        <meta
+            name="description"
+            content="A collection of apps to help you find the best Minecraft seeds, and locate biomes and structures in your world on an interactive map."
+        />
+        <link rel="canonical" href="index.html" />
+        <link rel="sitemap" href="sitemap-index.xml" />
+
+        <link rel="stylesheet" href="_astro/8nv7zFwfz92g.css" />
+    </head>
+
+    <body class="at-disable-header at-disable-content">
+        <div class="main-wrapper">
+            <div id="content">
+                <div id="main-content">
+                    <header>
+                        <h1 class="boxheader font-bold">Functions</h1>
+                    </header>
+                    <div class="FunctionsBox">
+                        <div class="FunctionBox">
+                            <img
+                                class="bullet inline"
+                                alt="Changed"
+                                src="_astro/icon-changed.CPwI8ZaB.png"
+                            />
+                            <p>[App]</p>
+                            <a
+                                class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                                href="apps/seed-map.html"
+                                >Seed Map
+                            </a>
+                        </div>
+                        <div class="FunctionBox-Timestamp">
+                            <p class="indent">Summer Drop Update</p>
+                            <time datetime="17-06-2025">Jun 17, 2025</time>
+                        </div>
+                        <div class="hr"></div>
+                        <img
+                            class="bullet inline"
+                            alt="Changed"
+                            src="_astro/icon-changed.CPwI8ZaB.png"
+                        />
+                        [App]
+                        <a
+                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                            href="apps/fossil-finder.html"
+                            >Fossil Finder</a
+                        >
+                        <p class="indent">Summer Drop Update</p>
+                        <time datetime="17-06-2025">Jun 17, 2025</time>
+                        <div class="hr"></div>
+                        <img
+                            class="bullet inline"
+                            alt="Changed"
+                            src="_astro/icon-changed.CPwI8ZaB.png"
+                        />
+                        [App]
+                        <a
+                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                            href="apps/biome-finder.html"
+                            >Biome Finder</a
+                        >
+                        <p class="indent">1.21.5 Update</p>
+                        <time datetime="25-03-2025">Mar 25, 2025</time>
+                        <div class="hr"></div>
+                        <img
+                            class="bullet inline"
+                            alt="Changed"
+                            src="_astro/icon-changed.CPwI8ZaB.png"
+                        />
+                        [App]
+                        <a
+                            class="cursor-pointer text-[#2a1fff] underline visited:text-[#551a8b] hover:outline-[0] focus:relative focus:top-px focus:outline-[thin_dotted] active:relative active:top-px active:outline-[0]"
+                            href="apps/mansion-finder.html"
+                            >Woodland Mansion Finder</a
+                        >
+                        <p class="indent">1.21.5 Update</p>
+                        <time datetime="25-03-2025">Mar 25, 2025</time>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Mirrored from www.chunkbase.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Aug 2025 14:31:00 GMT -->
+</html>

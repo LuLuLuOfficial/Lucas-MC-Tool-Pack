@@ -1,0 +1,17 @@
+[project]
+authors = [
+  {name = "Your Name", email = "you@example.com"},
+]
+dependencies = []
+description = ""
+name = "chunkbase"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[tool.poetry]
+packages = [{include = "chunkbase", from = "src"}]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
