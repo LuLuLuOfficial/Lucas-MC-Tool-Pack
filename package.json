@@ -1,13 +1,16 @@
 {
-  "name": "lucas-mc-tool-pack",
-  "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "license": "MIT"
+    "name": "lucas-mc-tool-pack",
+    "version": "1.0.0",
+    "engines": {
+        "node": "20.19.4"
+    },
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "license": "MIT"
 }
