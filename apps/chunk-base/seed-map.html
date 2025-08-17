@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seed Map</title>
+        <link rel="stylesheet" href="/css/chunk-base/seed-map.css" />
+        <script type="module" src="/js/function/utils.js" defer></script>
+        <script
+            type="module"
+            src="/js/chunk-base/seed-map/seed-map.js"
+            defer
+        ></script>
+        <script
+            type="module"
+            src="/js/chunk-base/seed-map/load-map.js"
+            defer
+        ></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="top-bar" state="hide">
+                <div class="buttons">
+                    <a href="/index.html" class="button" id="index"> LMTP </a>
+                    <a href="" class="button" id="index"> ChunkBase </a>
+                    <a
+                        href="/apps/chunk-base/seed-map_.html"
+                        class="button"
+                        id="index"
+                    >
+                        Other_01
+                    </a>
+                    <a href="" class="button" id="index"> Other_02 </a>
+                </div>
+                <button class="fold-button">V</button>
+            </div>
+            <div class="sub-container">
+                <div class="side-bar" state="hide">
+                    <div class="buttons">
+                        <div class="button" title="搜索">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="button" title="定位">
+                            <i class="fas fa-location-arrow"></i>
+                        </div>
+                        <div class="button" title="路线">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="button" title="测量">
+                            <i class="fas fa-ruler"></i>
+                        </div>
+
+                        <div class="button" title="标记">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="button" title="图层">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="button" title="分享">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="button" title="保存">
+                            <i class="fas fa-save"></i>
+                        </div>
+
+                        <div class="button" title="缩放">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <div class="button" title="全屏">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="button" title="打印">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <div class="button" title="设置">
+                            <i class="fas fa-cog"></i>
+                        </div>
+
+                        <div class="button" title="天气">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="button" title="交通">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="button" title="卫星">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <div class="button" title="更多">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+
+                        <div class="button" title="帮助">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="button" title="反馈">
+                            <i class="fas fa-comment-alt"></i>
+                        </div>
+                        <div class="button" title="收藏">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="button" title="历史">
+                            <i class="fas fa-history"></i>
+                        </div>
+                    </div>
+                    <button class="fold-button">></button>
+                </div>
+                <div class="map map-canvas"></div>
+            </div>
+        </div>
+    </body>
+</html>

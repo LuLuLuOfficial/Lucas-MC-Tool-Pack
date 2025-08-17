@@ -1,0 +1,207 @@
+:root {
+    --top-bar_space-height: 30px;
+    --side-bar_button-width: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    color: #333;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.top-bar {
+    position: relative;
+    top: -95px;
+    transition: top 0.3s ease;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar[state="show"] {
+    top: 0px;
+}
+
+.top-bar .fold-button {
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1;
+
+    width: 60px;
+    height: 20px;
+
+    background: rgba(113, 45, 132, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.top-bar .fold-button:hover {
+    color: #2d4e86;
+}
+
+.top-bar .buttons {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 30px 30px;
+    padding: 22.5px;
+    gap: 20px;
+    z-index: 1;
+
+    width: auto;
+    height: auto;
+
+    background: #8a8a8a;
+}
+
+.top-bar .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 130px;
+    height: 50px;
+
+    background: rgba(113, 45, 132, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.top-bar .button:hover {
+    border: 4px solid rgba(53, 103, 168, 0.765);
+}
+
+.sub-container {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.side-bar {
+    position: relative;
+    left: -360px;
+    transition: left 0.3s ease;
+    cursor: pointer;
+
+    height: 100%;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.side-bar[state="show"] {
+    left: 0px;
+}
+
+.side-bar .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 10px 10px 10px 10px;
+    gap: 10px;
+    z-index: 1;
+
+    width: calc(
+        5 * 60px + 40px + 20px
+    ); /* 5个按钮 * 一个宽度60px + 间隔10px + 折叠按钮宽度20px*/
+
+    height: 100%;
+
+    background-color: #606060;
+}
+
+.side-bar .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 60px;
+    height: 60px;
+
+    background: rgba(113, 45, 132, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.side-bar .button:hover {
+    border: 4px solid rgba(53, 103, 168, 0.765);
+}
+
+.side-bar .fold-button {
+    border-radius: 0px 10px 10px 0px;
+    z-index: 1;
+
+    width: 20px;
+    height: 60px;
+
+    background: rgba(113, 45, 132, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.side-bar .fold-button:hover {
+    color: #2d4e86;
+}
+
+.map {
+    position: fixed;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.map:active {
+    background-color: #92b9d3;
+}

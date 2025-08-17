@@ -13,7 +13,7 @@ def CreateTestsPY(TargetDir: str, Range: int | range):
 
     CreateCount: int = 0
     for FileIndex in Range:
-        FilePath: str = PathJoin(TargetDir, f'Test_{FileIndex}.html')
+        FilePath: str = PathJoin(TargetDir, f'Test_{FileIndex}.py')
         if FileExists(FilePath): continue
         with open(FilePath, 'w', encoding='utf-8') as File:
             File.close()
@@ -23,4 +23,4 @@ def CreateTestsPY(TargetDir: str, Range: int | range):
     print(f"\n总共创建 {CreateCount} 个测试脚本.")
 
 if __name__ == "__main__":
-    CreateTestsPY(TargetDir='tests', Range=5)
+    CreateTestsPY(TargetDir=r'python\tests', Range=5)

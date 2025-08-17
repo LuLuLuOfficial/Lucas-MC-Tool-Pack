@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>按钮来回移动</title>
+        <style>
+            #moveButton {
+                position: relative;
+                left: 0; /* 初始偏移为0 */
+                transition: left 0.3s ease; /* 添加平滑动画 */
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="moveButton">点击我移动</button>
+
+        <script>
+            const button = document.getElementById("moveButton");
+            let isMovedLeft = false; // 标记当前是否已经向左移动
+
+            button.addEventListener("click", function () {
+                if (isMovedLeft) {
+                    // 当前在左边，向右移动（回到原位）
+                    button.style.left = "0px";
+                    isMovedLeft = false;
+                } else {
+                    // 当前在右边或原位，向左移动
+                    button.style.left = "-10px";
+                    isMovedLeft = true;
+                }
+            });
+        </script>
+    </body>
+</html>

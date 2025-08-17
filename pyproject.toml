@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 version = "0.1.0"
 
 [tool.poetry]
-packages = [{include = "lmtp", from = "src"}]
+packages = [{include = "lmtp", from = "python/src"}]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
